@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!-- Favicon -->
+
+    <meta charset="utf-8">
+    <meta name="description" content="Plino - A responsive spam filtering system - Tasdik Rahman">
+    <meta name="keywords" content="Spam Filtering System, Plino, Tasdik Rahman, tasdikrahman, spamfilter">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Tasdik Rahman">
+    <title>Plino - An Intelligent spam filtering System</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <link href="/static/css/ripples.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/responsive.css" rel="stylesheet">
+    <link href="/static/css/animate.min.css" rel="stylesheet">
+
+    <!-- Code highlighting -->
+    <link href="/static/css/prism.css" rel="stylesheet" />
+    <!-- Code highlighting -->
+    <!-- Start Visual Website Optimizer Asynchronous Code -->
+    <script type='text/javascript'>
+    var _vwo_code=(function(){
+    var account_id=243020,
+    settings_tolerance=2000,
+    library_tolerance=2500,
+    use_existing_jquery=false,
+    // DO NOT EDIT BELOW THIS LINE
+    f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+    </script>
+    <!-- End Visual Website Optimizer Asynchronous Code -->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-invers menu-wrap">
+      <div class="navbar-header text-center">
+        <a class="navbar-brand logo-right" href="#home"><i class="mdi-image-timelapse"></i>Plino</a>
+      </div>
+        <ul class="nav navbar-nav main-navigation">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#cta">Demo</a></li>
+          <li><a href="#why">Classifier features</a></li>
+          <li><a href="#main-features">API usage</a></li>
+          <li><a href="#clients">Team</a></li>
+        </ul>
+        <button class="close-button" id="close-button">Close Menu</button>
+    </div>
+
+    <div class="content-wrap">
+     <header class="hero-area" id="home">
+      <div class="container">
+          <div class="col-md-12">
+
+            <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200" style="border-color:transparent">
+              <div class="container">
+                <div class="navbar-header">
+                  <a class="logo-left" class="active" href="#home"><i class="mdi-image-timelapse"></i>Plino</a>
+                </div>
+                <div class="navbar-right">
+                  <button class="menu-icon"  id="open-button">
+                    <i class="mdi-navigation-menu"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="contents text-right">
+          <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Plino - An Intelligent spam filtering System</h1>
+          <p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Built on top of a Custom Well Trained Naive Bayes Classifier</p>
+          <a href="#cta" class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Try out Live Demo</a>
+          <a href="#main-features" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">API Usage <i class="fa fa-cogs" aria-hidden="true"></i></a>
+          <a href="https://github.com/tasdikrahman/plino" target="_blank" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Fork us on <i class="fa fa-github"></i></a>
+        </div>
+    </header>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="100ms">Plino's Features</h1>
+          <h2 class="section-subtitle wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Who seeks after it and wants to have it</h2>
+        </div>
+        <div class="row">
+
+          <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="features">
+              <div class="icon">
+                <i class="mdi-action-settings"></i>
+              </div>
+              <div class="features-text">
+                <h4>Python based</h4>
+                <p>
+                  Built on top of beautiful and expressive <strong>Python</strong> and a lot more <strong><a href="https://github.com/tasdikrahman/plino/blob/materialize-UI/requirements.txt" target="_blank">things</a></strong>
+                </p>
+              </div>
+             </div>
+          </div>
+
+
+          <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
+            <div class="features">
+              <div class="icon">
+                <i class="mdi-action-done-all"></i>
+              </div>
+              <div class="features-text">
+                <h4>REST API</h4>
+                <p>
+                  We do provide a <a href="#main-features"><strong>REST API</strong></a> for you to integrate plino in your apps
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
+            <div class="features">
+              <div class="icon">
+                <i class="mdi-image-blur-linear"></i>
+              </div>
+              <div class="features-text">
+                <h4>Machine Learning</h4>
+                <p>
+                  Our custom machine learning classifiers do the heavy weight lifting of classifying your emails for you in a reliable manner.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="650ms">
+            <div class="features">
+              <div class="icon">
+                <i class="mdi-communication-business"></i>
+              </div>
+              <div class="features-text">
+                <h4>Unlimited Users</h4>
+                <p>
+                  Our REST API is currently available to anyone for use.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="750ms">
+            <div class="features">
+              <div class="icon">
+                <i class="mdi-action-favorite"></i>
+              </div>
+              <div class="features-text">
+                <h4>Crafted with Love</h4>
+                <p>
+                  We put a lot of time and effort on Plino so that users are faced with the least friction when using our service.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="850ms">
+            <div class="features">
+              <div class="icon">
+                <i class="mdi-hardware-phonelink"></i>
+              </div>
+              <div class="features-text">
+                <h4>Minimum Downtime</h4>
+                <p>
+                  Our guys back at <a href="https://heroku.com" target="_blank">Heroku</a> ensure that we have minimum downtime.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="container">
+        <div class="row text-center">
+            <!-- <h3 class="title-small wow bounce" data-wow-duration="1000ms" data-wow-delay="300ms">Join Us Today and Change Yourself</h3>
+             <a href="javascript:void(0)" class="btn btn-lg btn-border">Sign Up</a> -->
+             <h4 class="title-small wow bounce" data-wow-duration="1000ms" data-wow-delay="300ms">Here is some sample text but feel free to try your own emails to see what Plino can do</h4><br>
+
+             <form class="col s12">
+                 <div class="row" id="addcard">
+                   <div class="input-field col s12 m12 l6 wow slideInLeft white-text" data-wow-duration="2000ms" data-wow-delay="300ms">
+                       <textarea id="textarea1" class="materialize-textarea"></textarea>
+                       <label for="textarea1" class="white-text">Enter Text to check for Spam/Ham</label>
+                       <a class="btn btn-lg btn-border col s6 m5 l5" id="Submit" type="submit">
+                         <i class="material-icons right">send</i>Classify
+                       </a>
+                       <a class="btn btn-lg btn-border col s5 m5 l5 offset-l1 offset-m1 offset-s1" id="clear" type="clear">
+                         <i class="material-icons right">clear</i>Clear
+                       </a>
+                   </div>
+                 </div>
+             </form>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="why" class="section">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="pull-left content">
+              <h2>Tell me more about your Classifier?</h2>
+              <p>
+                <h5>Sure! Plino is powered by a custom Naive Bayes classifier which <a href="http://tasdikrahman.me">Tasdik</a> built while working on <a href="https://github.com/tasdikrahman/spammy">spammy</a>
+                <br>
+                We thought we could make an API for others to make use of our work. So here is Plino for you!</h5>
+                <br>
+              </p>
+              <ul class="list-item">
+                <li><i class="mdi-action-done"></i>classifier trained against 33,000 emails</li>
+                <li><i class="mdi-action-done"></i>Dataset used is the <a href="http://www.cs.cmu.edu/~enron/">Enron dataset</a></li>
+                <li><i class="mdi-action-done"></i>Simple REST API provided</li>
+                <li><i class="mdi-action-done"></i>Written in uncomplicated Python</li>
+                <li><i class="mdi-action-done"></i>Free To use</li>
+                <li><i class="mdi-action-done"></i>You can even run it locally!</li>
+              </ul>
+              <a href="https://github.com/tasdikrahman/plino" target="_blank" class="btn btn-lg btn-primary">Fork us on Github</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- API usage defined -->
+
+     <section id="main-features" class="section main-feature-gray">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-8 col-sm-8">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Access our API using cURL
+              </h3>
+              <p>
+                <strong>General syntax</strong>
+                <pre>
+                  <code class="language-bash">
+                    $ curl -H "Content-Type: application/json" -X \
+                      POST -d \
+                      '{"email_text":"SAMPLE EMAIL TEXT"}' \
+                      https://plino.herokuapp.com/api/v1/classify/
+                  </code>
+                </pre>
+              </p>
+              <p>
+                <strong>Example</strong>
+                <pre>
+                  <code class="language-bash">
+                    $ curl -H "Content-Type: application/json" \
+                    -X POST -d \
+                    '{"email_text":"Dear Tasdik, I would like to immediately transfer 10000 thousand dollars to your account as my beloved husband has expired and I have nobody to ask for to transfer the money to your account. I come from the family of the royal prince of burkino fasa and I would be more than obliged to take your help on this matter. Would you care to share your bank account details with me in the next email conversation that we have? -regards -Liah herman"}' \
+                    https://plino.herokuapp.com/api/v1/classify/
+                  </code>
+                </pre>
+
+                <strong>JSON Output</strong>
+                <pre>
+                  <code class="language-json">
+                    {
+                      "email_class": "spam",
+                      "email_text": "Dear Tasdik, I would like to immediately transfer 10000 thousand dollars to your account as my beloved husband has expired and I have nobody to ask for to transfer the money to your account. I come from the family of the royal prince of burkino fasa and I would be more than obliged to take your help on this matter. Would you care to share your bank account details with me in the next email conversation that we have? -regards -Liah herman", 
+                      "status": 200
+                    }
+                  </code>
+                </pre>
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-4">
+            <img src="/static/img/features/logo-curl.png" class="img-responsive" alt="">
+          </div>  
+
+        </div>
+
+      </div>
+    </section>
+
+     <section id="main-features" class="section">
+      <div class="container">
+
+
+        <div class="row">   
+          <div class="col-md-4 col-sm-4">
+            <img src="/static/img/features/requests-sidebar.png" class="img-responsive" alt="">
+          </div>    
+
+          <div class="col-md-8 col-sm-8">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Accessing API using requests (in python)
+              </h3>
+              <p>
+                How can we forget our beloved <a href="https://github.com/kennethreitz/requests">requests module</a> (by <a href="https://github.com/kennethreitz/">kenneth</a>)
+              </p>
+              <p>
+                <strong>General syntax</strong>
+                <pre>
+                  <code class="language-python">
+                    >>> import requests
+                    >>> import json
+                    >>> import pprint
+                    >>>
+                    >>> api_url = "https://plino.herokuapp.com/api/v1/classify/"
+                    >>> payload = \
+                    {
+                    'email_text': 'Dear Tasdik, I would like to immediately transfer 10000 '
+                                   'thousand dollars to your account as my beloved husband has '
+                                   'expired and I have nobody to ask for to transfer the money '
+                                   'to your account. I come from the family of the royal prince '
+                                   'of burkino fasa and I would be more than obliged to take '
+                                   'your help on this matter. Would you care to share your bank '
+                                   'account details with me in the next email conversation that '
+                                   'we have? -regards -Liah herman'
+                    }
+                    >>>
+                    >>> headers = {'content-type': 'application/json'}
+                    >>> # query our API
+                    >>> response = requests.post(api_url, data=json.dumps(payload), headers=headers)
+                    >>> response.status_code
+                    200
+                    >>> pprint.pprint(response.json())
+                    {
+                     'email_class': 'spam',
+                     'email_text': 'Dear Tasdik, I would like to immediately transfer 10000 '
+                                   'thousand dollars to your account as my beloved husband has '
+                                   'expired and I have nobody to ask for to transfer the money '
+                                   'to your account. I come from the family of the royal prince '
+                                   'of burkino fasa and I would be more than obliged to take '
+                                   'your help on this matter. Would you care to share your bank '
+                                   'account details with me in the next email conversation that '
+                                   'we have? -regards -Liah herman',
+                     'status': 200
+                     }
+                    >>> 
+                  </code>
+                </pre>
+              </p>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+
+     <section id="main-features" class="section main-feature-gray">
+      <div class="container">
+
+        <div class="row">   
+          <div class="col-md-8 col-sm-8">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Using the Python 3 Standard Library
+              </h3>
+              <p>
+                <a href="https://github.com/kennethreitz/requests">requests module</a> really makes our life easy and I use it all the time. But **sigh**, there should be an example using the standard library so here it is
+              </p>
+              <p>
+                <strong>General Syntax</strong>
+                <pre>
+                  <code class="language-python">
+                 >>> import urllib.request
+                 >>> import json
+                 >>> import pprint 
+                 >>>
+                 >>> url = "https://plino.herokuapp.com/api/v1/classify/"
+                 >>> req = urllib.request.Request(url)
+                 >>> req.add_header(
+                        'Content-Type',
+                        'application/json; charset=utf-8'
+                    )
+                 >>>
+                 >>> body = \
+                 {'email_text': 'Dear Tasdik, I would like to immediately transfer 10000 '
+                                'thousand dollars to your account as my beloved husband has '
+                                'expired and I have nobody to ask for to transfer the money '
+                                'to your account. I come from the family of the royal prince '
+                                'of burkino fasa and I would be more than obliged to take '
+                                'your help on this matter. Would you care to share your bank '
+                                'account details with me in the next email conversation that '
+                                'we have? -regards -Liah herman'
+                 }
+                 >>> json_data = json.dumps(body).encode('utf-8')   # needs to be bytes
+                 >>> req.add_header('Content-Length', len(json_data))
+                 >>>
+                 >>> with urllib.request.urlopen(req, json_data) as f:
+                 ...   print(f.read().decode('utf-8'))
+                 ... 
+                 {
+                   "email_class": "spam", 
+                   "email_text": "Dear Tasdik, I would like to immediately transfer 10000 thousand dollars to your account as my beloved husband has expired and I have nobody to ask for to transfer the money to your account. I come from the family of the royal prince of burkino fasa and I would be more than obliged to take your help on this matter. Would you care to share your bank account details with me in the next email conversation that we have? -regards -Liah herman", 
+                   "status": 200
+                 }
+                 >>> 
+                  </code>
+                </pre>
+
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-4">
+            <img src="/static/img/features/python-logo.png" class="img-responsive" alt="">
+          </div>  
+
+        </div>
+
+      </div>
+    </section>
+<!-- 
+    <section id="counter" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="counter-item">
+              <div class="icon">
+                <i class="mdi-action-get-app"></i>
+              </div>
+              <h3 class="timer">39000</h3>
+              <hr>
+              <h5>
+                Free Downloads
+              </h5>          
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+            <div class="counter-item">
+              <div class="icon">
+                <i class="mdi-action-face-unlock"></i>
+              </div>
+              <h3 class="timer">1046</h3>
+              <hr>
+              <h5>
+                Premium Users
+              </h5>          
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="700ms">
+            <div class="counter-item">
+              <div class="icon">
+                <i class="mdi-action-grade"></i>
+              </div>
+              <h3 class="timer">6345</h3>
+              <hr>
+              <h5>
+                Five Start Reviews
+              </h5>          
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="900ms">
+            <div class="counter-item">
+              <div class="icon">
+                <i class="mdi-action-trending-up"></i>
+              </div>
+              <h3 class="timer">18325</h3>
+              <hr>
+              <h5>
+                Active Installs
+              </h5>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ -->
+<!-- 
+    <section id="clients" class="section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <h1 class="section-title wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">Featured on</h1>
+          <h2 class="section-subtitle wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">Material UI Bootstrap APP and Business Template</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="client-item-wrapper">
+              <img src="img/clients/img1.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+            <div class="client-item-wrapper">
+              <img src="img/clients/img2.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="700ms">
+            <div class="client-item-wrapper">
+              <img src="img/clients/img3.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="900ms">
+            <div class="client-item-wrapper">
+              <img src="img/clients/img4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ -->
+
+ 
+     <section id="clients" class="section">
+       <div class="row container">
+         
+         <div class="section-header text-center row">
+           <h1 class="section-title wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">Team</h1>
+           <h2 class="section-subtitle wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">The people behind Plino</h2>
+         </div>
+         <!-- <div class="row">
+           <div class="col-md-3 col-sm-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+             <div class="client-item-wrapper">
+               <img src="img/clients/img1.png" alt="">
+             </div>
+           </div>
+           <div class="col-md-3 col-sm-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+             <div class="client-item-wrapper">
+               <img src="img/clients/img2.png" alt="">
+             </div>
+           </div>
+           <div class="col-md-3 col-sm-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="700ms">
+             <div class="client-item-wrapper">
+               <img src="img/clients/img3.png" alt="">
+             </div>
+           </div>
+           <div class="col-md-3 col-sm-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="900ms">
+             <div class="client-item-wrapper">
+               <img src="img/clients/img4.png" alt="">
+             </div>
+           </div>
+         </div> -->
+         <!-- card 1 -->
+         <div class="card col s12 m5 offset-m1 l5 offset-l1">
+           <div class="card-header">
+             <img src="/static/img/team/boss_man.jpg"/>
+           </div>
+           <div class="card-content">
+             <h3>Tasdik Rahman</h3>
+             <h4>ML & NLP enthusiast, Flask/Django dev, Python overlord @ <a href="http://srmsearchengine.in/se.html" target="_blank">SRMSE</a></h4>
+             <p>
+               ♥'s python and speaks parseltongue way too often apparently. Has been wasting his weekends lately building stuff instead of studying, (here is a <a href="http://tasdikrahman.me/projects" target="_blank">curated list</a> for the curious)<br>
+               When not programming, he can be found gobbling up pizzas, listenting to rap music or prowling on <a href="https://medium.com/@tasdikrahman" target="_blank">medium</a>
+             </p>
+           </div>
+           <div class="card-footer">
+             <ul>
+               <li>
+                 <a href="https://github.com/tasdikrahman" target="_blank"><i class="fa fa-github"></i></a>
+               </li>
+               <li>
+                 <a href="https://www.linkedin.com/in/tasdikrahman" target="_blank"><i class="fa fa-linkedin"></i></a>
+               </li>
+               <li>
+                 <a href="http://careers.stackoverflow.com/tasdikrahman" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+               </li>
+               <li>
+                 <a href="http://angel.co/tasdikrahman" target="_blank"><i class="fa fa-angellist"></i></a>
+               </li>
+               <li>
+                 <a href="https://twitter.com/tasdikrahman" target="_blank"><i class="fa fa-twitter"></i></a>
+               </li>
+               <li>
+                 <a href="http://tasdikrahman.me" target="_blank"><i class="fa fa-rss"></i></a>
+               </li>
+             </ul>
+           </div>
+         </div>
+         <!-- card 1 -->
+
+         <!-- card 2 -->
+         <div class="card col s12 m5 offset-m1 l5 offset-l1">
+           <div class="card-header">
+             <img src="/static/img/team/milf_hunter.jpg"/>
+           </div>
+           <div class="card-content">
+             <h3>Nitesh Sharma</h3>
+             <h4>Full Stack Flask, Django and Rails Developer, Head of Web Dev @ <a href="http://srmadt.com/">SRMADT</a></h4>
+             <p>
+             A Full Stack Web Developer and JavaScripter. Expert in Ruby on Rails, Flask and Express.js FrameWorks. Also develops Hybrid Mobile apps using Ionic framework and Angular Js. <br>Also had been Captain of state level Kabaddi Champion Team and loves Cooking in spare time</p>
+           </div>
+           <div class="card-footer">
+             <ul>
+               <li>
+                 <a href="https://github.com/sinscary"><i class="fa fa-github"></i></a>
+               </li>
+               <li>
+                 <a href="https://www.linkedin.com/in/nitesh-sharma-437103b2"><i class="fa fa-linkedin"></i></a>
+               </li>
+               <li>
+                 <a href="http://careers.stackoverflow.com/sinscary" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+               <li>
+                 <a href="https://twitter.com/sinskary" target="_blank"><i class="fa fa-twitter"></i></a>
+               </li>
+               <li>
+                 <a href="http://niteshsharma.me" target="_blank"><i class="fa fa-rss"></i></a>
+               </li>
+               <li>
+                 <a href="https://www.quora.com/profile/Nitesh-Sharma-61"><i class="fa fa-fw"><strong>Q</strong></i></a>
+               </li>
+             </ul>
+           </div>
+         </div>
+         <!-- card 2 -->
+       </div>
+     </section>
+ 
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2 class="section-title">Trivia</h2>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="info">
+                  <div class="icon">
+                    <i class="mdi-maps-map"></i>
+                  </div>
+                  <h4>Location</h4>
+                  <p>SRM University, Chennai, India</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="info">
+                  <div class="icon">
+                    <i class="mdi-content-mail"></i>
+                  </div>
+                  <h4>Email</h4>
+                  <p>prodicus AT outlook DOT com</p>
+                </div>
+              </div>
+              <div class="" ss="clear"></div>
+            </div>
+          </div>
+
+          <div class="col-md-6 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h4 class="section-title">We would Love to Hear From You</h4>
+            <h5>This project is still a Work in progress. Your feedback is more than welcome!</h5>
+            <div class="text-center">
+                <a href="https://github.com/tasdikrahman/plino/issues" target="_blank" class="btn btn-larg btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div>
+        </div>
+      </div>
+    </section>    
+
+    <section id="footer">
+      <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">Home</a>
+                </li>
+                <li><a href="#features">Features</a>
+                </li>
+                <li><a href="#cta">Demo</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>FAQs</h3>
+              <ul>
+                <li><a href="https://github.com/tasdikrahman/plino/issues" target="_blank">Issues</a>
+                </li>
+                <li><a href="#main-features">API Usage</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <a class="social" href="https://github.com/tasdikrahman/plino" target="_blank"><i class="fa fa-github"></i></a>
+              <a class="social" href="https://twitter.com/tasdikrahman" target="_blank"><i class="fa fa-twitter"></i></a>
+               <a class="social" href="https://www.producthunt.com/tech/plino"><i class="fa fa-product-hunt"></i></a>
+              <a class="social" href="#"><i class="fa fa-hacker-news"></i></a>
+             
+            </div>
+          </div>
+        </div>  
+      </div>      
+      <!-- Go to Top Link -->
+      <a href="#home" class="btn btn-primary back-to-top">
+      <i class=" mdi-hardware-keyboard-arrow-up"></i>
+      </a>
+    </section> 
+
+    <section id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="copyright-text">
+             © Plino 2016 All rights reserved. 
+            </p>
+            <p class="copyright-text">
+              Built with <i class="fa fa-heart"></i> by 
+              <a href="http://tasdikrahman.me/" target="_blank">
+                Tasdik Rahman
+              </a> and <a href="https://github.com/sinscary" target="_blank">Nitesh Sharma</a>
+            </p>
+            <p class="copyright-text"> 
+            <a href="http://flask.pocoo.org/"><img src="/static/images/flask.jpg" width="120px" height="50px" style="padding-right:1em;" class=""></a>
+            <!-- <a href="http://www.gnu.org/licenses/gpl-3.0.en.html"><img src="/static/images/gplv3.png" class=""></a> -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>     
+    </div>  
+		
+    <!-- <script type="text/javascript" src="/static/js/jquery-2.2.2.min.js"></script> -->
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/ripples.min.js"></script>
+    <script src="/static/js/wow.js"></script>
+    <script src="/static/js/jquery.mmenu.min.all.js"></script> 
+    <script src="/static/js/count-to.js"></script>   
+    <script src="/static/js/jquery.inview.min.js"></script>     
+    <script src="/static/js/classie.js"></script>
+    <script src="/static/js/jquery.nav.js"></script>      
+    <script src="/static/js/smooth-on-scroll.js"></script>
+    <script src="/static/js/smooth-scroll.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/prism.js"></script>
+
+
+    <!-- Main JS Script which calls the classifier -->
+
+    <!-- Default text inside document dorm which is a ham -->
+    <!-- Default text inside document dorm which is a ham -->
+
+    <script type="text/javascript">
+    
+    $("#Submit").click(function(){
+        var messageTxt = $('#textarea1').val();
+        if(messageTxt.length <= 10){
+          $('#addcard').find('div:nth-child(2)').remove();
+          $('#addcard').append('<div class="row"><div class="col s12 m6 l6"><div class="card red"><div class="card-content white-text"><span class="card-title">Please give me more text to analyze!</span><p></p></div></div></div></div>');
+        }
+        if (messageTxt.length > 10){
+          $('#addcard').find('div:nth-child(2)').remove();
+
+          $.post('/api/classify',{message: messageTxt},function(result){
+
+            if(result.category == 'spam'){
+              console.log('text is a spam');
+              $('#addcard').append('<div class="row"><div class="col s12 m6 l6"><div class="card red flow-text"><div class="card-content white-text"><span class="card-title">Looks like it is a Spam!</span><p></p></div></div></div></div>');
+            }
+            else if(result.category == 'ham'){
+              console.log('text is a ham');
+              $('#addcard').append('<div class="row"><div class="col s12 m6 l6"><div class="card green"><div class="card-content white-text"><span class="card-title">Yaay, this content is spam-free</span><p></p></div></div></div></div>');
+            }
+            else if(result.category == 'UnicodeEncodeError'){
+              console.log('UnicodeEncodeError');
+              $('#addcard').append('<div class="row"><div class="col s12 m6 l6"><div class="card orange lighten-3"><div class="card-content white-text"><span class="card-title">Sorry, there was an Encoding issue.</span><p></p></div></div></div></div>');
+            }
+        });
+      }
+    });
+
+    </script>
+
+    <script type="text/javascript">
+
+    $('#clear').click(function(){
+      $('#addcard').find('div:nth-child(2)').remove();
+      $('#textarea1').val("").trigger('autoresize');
+    });
+    </script>
+
+    <!-- Main JS Script which calls the classifier -->
+
+    <script>
+        $(document).ready(function() {
+            // This command is used to initialize some elements and make them work properly
+            $('#textarea1').val("Dear Students PFA..The B.Tech IT Minor Project Final review is scheduled on 7/5/2016 and 9/5/2016.While coming for final review, A) Students should complete the 100% project and need to show the full project demo. B) Each students in a every group have to submit their report and one report + CD(Documentation+ Coding) should be submitted to the department from each group. ( report format attached with this mail ),C) Students those who are not present for a final review at correct time are considered as arrear in minor project.D) 28/4/16 is the last date for the submission of Minor Project Report to get signature from the hod.");
+            $('#textarea1').trigger('autoresize');
+            $.material.init();
+        });
+    </script>
+
+    <!-- Google GA -->
+    <!-- Google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-73854219-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- Google analytics -->
+    <!-- Google GA -->
+
+  </body>
+
+</html>
