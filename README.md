@@ -1,5 +1,7 @@
 # Spam Scanner
 
+_Cloned from and built on the work of [Plino](https://github.com/tasdikrahman/plino) and [Spammy](https://github.com/tasdikrahman/spammy)_
+
 ## About
 
 A spam scanning web application
