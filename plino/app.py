@@ -11,7 +11,7 @@ import logging
 import sys
 
 from flask import Flask, jsonify, render_template, request, abort
-from flask.ext.cache import Cache
+from flask_caching import Cache
 
 from utils import ham_or_spam
 

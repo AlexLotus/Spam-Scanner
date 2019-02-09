@@ -176,7 +176,7 @@ class NaiveBayesClassifier(object):
         if len(probability.items()) > 0:
             return sorted(
                 probability.items(),
-                key=lambda (k, v): v,
+                key=lambda k, v: v,
                 reverse=True
             )[0][0]
         else:
@@ -190,11 +190,11 @@ class NaiveBayesClassifier(object):
         :param self: class object
         """
         list_of_lists = [list(elem) for elem in self.classification.items()]
-        print tabulate(
+        print (tabulate(
             list_of_lists,
             headers=['Label', 'Score'],
             tablefmt='orgtbl'
-        )
+        ))
 
     def __str__(self):
         """
