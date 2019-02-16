@@ -16,7 +16,7 @@ import logging
 from tabulate import tabulate
 
 logging.basicConfig(
-    filename='logfiles/logfile.txt',
+    filename='../logfiles/logfile.txt',
     level=logging.DEBUG,
     filemode='w',
     format='%(asctime)s - %(levelname)s - %(message)s'
