@@ -24,8 +24,11 @@ A user should be able to sign in with their email address that they want to scan
 
 Steps borrowed and modified from [Flask Documentation](http://flask.pocoo.org/docs/1.0/installation/) & Plino [Readme](https://github.com/tasdikrahman/plino) + [Documentation](https://github.com/tasdikrahman/plino/blob/master/CONTRIBUTING.md)
 
+The project can be cloned at any step after creating the root project folder and before installing dependencies.
+
 1. Install python 3.x
-2. Go to root project folder and create a venv folder
+2. Create the root project folder
+3. Go to root project folder and create a venv folder
 
 ```bash
 python3 -m venv venv
@@ -47,6 +50,8 @@ pip3 install Flask
 
 ```bash
 $ source venv/bin/activate
+# Clone this project if you haven't yet
+# (venv)$ git clone https://github.com/AlexLotus/Spam-Scanner.git
 (venv)$ cd plino
 (venv)$ pip3 install -r requirements.txt
 ```
