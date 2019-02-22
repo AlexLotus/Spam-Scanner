@@ -62,7 +62,7 @@ class App extends Component {
   };
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { error, isLoaded, items, message } = this.state;
     return (
       <div className="App">
         <nav
@@ -136,6 +136,7 @@ class App extends Component {
                             placeholder="Insert message here"
                             className="form-control"
                             onChange={this.onMessageChange}
+                            value={message}
                           />
                         </div>
                         <input
