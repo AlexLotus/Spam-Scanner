@@ -81,10 +81,10 @@ class Trainer(object):
             or self.limit
 
         if verbose:
-            print colored("Training {0} emails in {1} class".format(
+            print (colored("Training {0} emails in {1} class".format(
                 limit, label
             ), 'green'
-            )
+            ))
             logging.debug("Training {0} emails in {1} class".format(
                 limit, label
             )
@@ -95,7 +95,7 @@ class Trainer(object):
 
         for email in os.listdir(path)[:self.limit]:
             if verbose and verbose > 1:
-                print colored("Processing file: {0}".format(email), 'green')
+                print (colored("Processing file: {0}".format(email), 'green'))
                 logging.info("Processing file: {0}".format(email))
             email_file = open(email, 'r')  # explicit better than implicit
             email_text = email_file.read()
@@ -111,7 +111,7 @@ class Trainer(object):
                 email_text = bs4.UnicodeDammit.detwingle(
                     email_text).decode('utf-8')
             except:
-                print colored("Skipping file {0} due to bad encoding".format(email), 'red')
+                print (colored("Skipping file {0} due to bad encoding".format(email), 'red'))
                 logging.error("Skipping file {0} due to bad encoding".format(
                     os.path.join(path, email)
                 )
@@ -130,7 +130,7 @@ class Trainer(object):
         """prints the __str__ overridden method in the class
         'NaiveBayesClassier'
         """
-        print self.classifier
+        print (self.classifier)
 
     def train(self, verbose=False):
         """
