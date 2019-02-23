@@ -11,10 +11,18 @@ import os
 
 import bs4
 import dill
-dill.dill._reverse_typemap['IntType'] = type
 
 APP = os.path.abspath(__file__)
 APP_DIR, APP_NAME = os.path.split(APP)
+
+"""
+Commented below out, the saved_classifiers files are python 2 pickles
+and not compatible with python 3 pickle methods
+(We need to figure that out #nextiteration)
+
+dill.dill._reverse_typemap[b'IntType'] = bytes
+dill.dill._reverse_typemap[b'CodeType'] = types.CodeType
+
 
 classifier_file_path = os.path.join(APP_DIR, 'saved_classifiers', 'spam_classifier.pickle')
 classifier_file = open(classifier_file_path, 'rb')
@@ -25,6 +33,8 @@ trainer_file_path = os.path.join(APP_DIR, 'saved_classifiers', 'trainer.pickle')
 trainer_file = open(trainer_file_path, 'rb')
 trainer_object = dill.load(trainer_file)
 trainer_file.close()
+
+"""
 
 def ham_or_spam(email_text):
     """
@@ -39,19 +49,19 @@ def ham_or_spam(email_text):
         email_text = email_text.encode('ascii', 'ignore')
         # ====================== #
 
-        hamorspam = classifier_object.classify(
-                        trainer_object.extract_features(email_text)
-                    )
-        response = {'category': hamorspam, 'status': 'ok'}
+        # hamorspam = classifier_object.classify(
+        #                 trainer_object.extract_features(email_text)
+        #             )
+        response = {'category': 'test', 'status': 'ok'}
 
         # anything printed to the STDOUT will be stored in heroku's logs
-        print ("TEXT: '{0}' :: RESPONSE : '{1}'").format(
-                    email_text.replace("\n", " ").replace("\r", " "),
-                    hamorspam
-                )
+        print(("TEXT: '{0}' :: RESPONSE : '{1}'").format(     
+                    email_text.replace("\n", " ").replace("\r", " "),     
+                    'test'
+                ))
 
         return response
     except UnicodeEncodeError:
         hamorspam = 'UnicodeEncodeError'
-        response = {'category': hamorspam, 'status': 'error'}
+        response = {'category': 'test', 'status': 'error'}
         return response
