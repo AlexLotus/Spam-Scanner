@@ -15,7 +15,8 @@ from flask_caching import Cache
 
 from utils import ham_or_spam
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="./web/build/static",
+            template_folder="./web/build")
 
 # defining the app settings for caching
 # TODO: use 'memcache' or 'redis' later than using the browser inmemory
