@@ -12,7 +12,7 @@ A user should be able to sign in with their email address that they want to scan
 
 ## Backend
 
-- Python 3.7
+- Python >=3
   - Flask web microframework
 
 ## Frontend
@@ -56,39 +56,10 @@ $ source venv/bin/activate
 (venv)$ pip3 install -r requirements.txt
 ```
 
-## Developing Spam-Scanner
-
-The following commands are used to develop Spam-Scanner.
-
-### Front-end Development
-
-This uses webpack-dev-server to automatically apply any changes made to the front-end. Allowing you to see your changes in near-realtime from the browser.
-
-```bash
-# From root directory
-$ cd plino/web
-$ npm start
-# Front-end app then builds and runs from http://localhost:3000/
-```
-
-### Back-end development
-
-Run this command after making changes to the back-end to see them.
-
-```bash
-# From root directory
-$ make run
-# Back-end changes then runs on http://127.0.0.1:8000
-```
-
 ## Running Spam-Scanner
 
-The following commands must be executed to run Spam-Scanner with the python server serving the web page.
+The following command must be done to run Spam-Scanner
 
 ```bash
-# From root directory
-$ cd plino/web
-$ npm run-script build
-$ cd ../../
 $ make run
 ```
