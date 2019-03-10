@@ -2,10 +2,30 @@
   "name": "static",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "flatted": "^2.0.0",
+    "install-peers": "^1.0.3",
+    "react-scripts": "^2.1.5"
+  },
   "dependencies": {
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "axios": "^0.18.0",
+    "braces": "^2.3.2",
+    "install": "^0.12.2",
+    "material-ui": "^0.20.2",
+    "npm": "^6.8.0",
+    "package.json": "^2.0.1",
+    "parser": "^0.1.4",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-dropzone": "^3.13.4",
+    "react-file-tree": "0.0.8",
+    "react-router-dom": "^4.3.1",
+    "react-social-login-buttons": "^2.3.0",
+    "react-tap-event-plugin": "^3.0.3",
+    "react-virtualized": "^7.24.3",
+    "superagent": "^3.8.3",
+    "typescript": "^3.3.3333"
   },
   "scripts": {
     "start": "react-scripts start",

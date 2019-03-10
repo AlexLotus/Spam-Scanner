@@ -1,11 +1,18 @@
+/* eslint-disable */
 import React, { Component } from "react";
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import logo from "./logo.svg";
 import "./App.css";
+import Loginscreen from './Loginscreen'
+
+injectTapEventPlugin();
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loginPage:[],
+      uploadScreen:[],
       error: null,
       isLoaded: false,
       items: [],
@@ -13,6 +20,14 @@ class App extends Component {
       message: "my uncle ben!"
     };
   }
+
+  componentWillMount(){
+      var loginPage =[];
+      loginPage.push(<Loginscreen parentContext={this}/>);
+      this.setState({
+                    loginPage:loginPage
+                      })
+    }
 
   componentDidMount() {
     this.checkMessage();
@@ -65,6 +80,8 @@ class App extends Component {
     const { error, isLoaded, items, message } = this.state;
     return (
       <div className="App">
+        {this.state.loginPage}
+        {this.state.uploadScreen}
         <nav
           className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top App-header"
           id="mainNav"
@@ -199,5 +216,9 @@ class App extends Component {
     );
   }
 }
+
+const style = {
+  margin: 15,
+};
 
 export default App;
