@@ -10,7 +10,10 @@ class App extends Component {
       isLoaded: false,
       items: [],
       emailtext: "none",
-      message: "my uncle ben!"
+      message: "",
+      messages: [],
+      items2: [],
+      message2: ""
     };
   }
 
@@ -22,6 +25,14 @@ class App extends Component {
     this.setState({ message: e.target.value });
   };
 
+  onMessageChange2 = e => {
+    this.setState({ message: e.target.value });
+    var test = e.target.value;
+    var test2 = test.split(',');
+    this.setState({ messages: test2 });
+  };
+
+
   handleSubmit = e => {
     e.stopPropagation();
     e.preventDefault();
@@ -29,8 +40,18 @@ class App extends Component {
     this.checkMessage();
   };
 
+  handleSubmit2 = e => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    this.checkMessage2();
+  };
+
+
+
   checkMessage = () => {
     const { message } = this.state;
+      this.setState({items: "Loading..."});
     fetch(
       "https://cors-anywhere.herokuapp.com/https://plino.herokuapp.com/api/v1/classify/",
       {
@@ -61,8 +82,47 @@ class App extends Component {
       );
   };
 
+  checkMessage2 = () => {
+      this.setState({items2: "Loading..."});
+      console.log(this.state.items2);
+      this.state.items2.push("Loading...");
+      console.log(this.state.items2);
+      this.setState({ items2: [] });
+      for (var i = 0; i < this.state.messages.length; i++) {
+    fetch(
+      "https://cors-anywhere.herokuapp.com/https://plino.herokuapp.com/api/v1/classify/",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email_text: this.state.messages[i]
+        })
+      }
+    )
+      .then(res => res.json())
+      .then(
+        result => {
+          this.state.items2.push(result.email_class);
+          this.setState({message2: String(this.state.items2)});
+        },
+        error => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      );
+      }
+        
+      //var array = this.state.items2;
+      //this.setState({ items2: array });
+  };
+
   render() {
-    const { error, isLoaded, items, message } = this.state;
+    const { error, isLoaded, items, items2, message, message2 } = this.state;
     return (
       <div className="App">
         <nav
@@ -114,12 +174,25 @@ class App extends Component {
           </div>
         </header>
 
-        <section id="about">
+        
+        <section id="info-tabs">
+        <h2>Test out our spam service!</h2>
+                <p className="lead">Insert some text for testing</p>
+        
+                    <nav className="d-flex justify-content-center">
+                      <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a className="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Single Message</a>
+                        <a className="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Multiple Messages</a>
+                      </div>
+                    </nav>
+                    <div className="tab-content" id="nav-tabContent">
+                      <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                          
+                          <section id="about">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 mx-auto">
-                <h2>Test out our spam service!</h2>
-                <p className="lead">Insert some text for testing</p>
+                <p className="lead">Insert one message to classify</p>
                 <p>{this.emailtext}</p>
                 {!isLoaded ? (
                   <div>Loading...</div>
@@ -147,13 +220,64 @@ class App extends Component {
                       </form>
                     </div>
                     <div className="card-footer">
-                      <strong>Result: {items}</strong>
+                      <strong>Result: {this.state.items}</strong>
+                      
+
                     </div>
                   </div>
                 )}
               </div>
             </div>
           </div>
+        </section>
+                          
+                          </div>
+                      <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                          
+                          <section id="about">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 mx-auto">
+                <p className="lead">Insert multiple messages to classify, seperated by comma</p>
+                <p>{this.emailtext}</p>
+                {!isLoaded ? (
+                  <div>Loading...</div>
+                ) : error ? (
+                  <div>Error: {error.message}</div>
+                ) : (
+                  <div className="card">
+                    <div className="card-body">
+                      <form onSubmit={this.handleSubmit2} className="text-left">
+                        <div className="form-group">
+                          <label>Message:</label>
+                          <input
+                            type="text"
+                            placeholder="Insert message here"
+                            className="form-control"
+                            onChange={this.onMessageChange2}
+                            value={message}
+                          />
+                        </div>
+                        <input
+                          type="submit"
+                          value="Submit"
+                          className="btn btn-primary"
+                        />
+                      </form>
+                    </div>
+                    <div className="card-footer">
+                      <strong>Result: {this.state.message2}</strong>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+                          
+                          </div>
+                    </div>
+            
         </section>
 
         <section id="services" className="bg-light">
