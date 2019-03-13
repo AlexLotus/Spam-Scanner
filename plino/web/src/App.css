@@ -37,28 +37,3 @@
 section {
   padding: 5rem 0;
 }
-
-.router {
-  padding-bottom: 55px;
-}
-
-a:hover{
-  text-decoration: none;
-} 
-
-.logo {
-  width: 250px;
-}
-
-.linear {
-  background-image: linear-gradient(90deg, #0f0c29,#302b63,#24243e);  
-}
-.white {
-  color: white;
-  text-align: center;
-  max-width: 60%;
-  margin: auto;
-}
-.red {
-  background-color: #F22613;
-}
