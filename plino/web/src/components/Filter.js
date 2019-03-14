@@ -5,7 +5,7 @@ export default class Filter extends Component {
         super(props);
         this.state = {
           error: null,
-          isLoaded: false,
+          isLoaded: true,
           items: [],
           emailtext: "none",
           message: "",
@@ -16,7 +16,7 @@ export default class Filter extends Component {
       }
     
       componentDidMount() {
-        this.checkMessage();
+        //this.checkMessage();
       }
 
       onMessageChange = e => {
@@ -43,7 +43,7 @@ export default class Filter extends Component {
         const { message } = this.state;
           this.setState({items: "Loading..."});
         fetch(
-          "https://cors-anywhere.herokuapp.com/https://plino.herokuapp.com/api/v1/classify/",
+          "http://localhost:8000/api/v1/classify/",
           {
             method: "POST",
             headers: {
@@ -80,12 +80,13 @@ export default class Filter extends Component {
           this.setState({ items2: [] });
           for (var i = 0; i < this.state.messages.length; i++) {
         fetch(
-          "https://cors-anywhere.herokuapp.com/https://plino.herokuapp.com/api/v1/classify/",
+          "http://localhost:8000/api/v1/classify/",
           {
             method: "POST",
             headers: {
               Accept: "application/json",
-              "Content-Type": "application/json"
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*"
             },
             body: JSON.stringify({
               email_text: this.state.messages[i]

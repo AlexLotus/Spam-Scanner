@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Filter from "./components/Filter";
+import UpdatedFilter from "./components/UpdatedFilter";
 import "./App.css";
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
 
             <Route exact path="/" component={Home} />
             <Route path="/filter" component={Filter} />
+            <Route path="/new" component={UpdatedFilter} />
           </div>
         </Router>
         

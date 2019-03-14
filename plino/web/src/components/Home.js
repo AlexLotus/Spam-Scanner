@@ -18,7 +18,7 @@ export default class Home extends Component {
                         and downloads are in planning 2019!
                     </p>
 
-                    <Link to="/filter">
+                    <Link to="/new">
                         <input type="button" value="Try it out!" className="btn btn-lg btn-danger" />
                     </Link>
                 </section>
