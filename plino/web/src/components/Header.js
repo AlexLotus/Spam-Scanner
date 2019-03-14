@@ -36,7 +36,7 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/filter">
+                  <Link to="/new">
                     <a className="nav-link">
                     Filtering
                     </a>
