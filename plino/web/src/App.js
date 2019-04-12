@@ -44,11 +44,11 @@ class App extends Component {
       <div className="App">
       <header className="App-Header">
       <img src={logo} className="App-logo" alt="logo" />
-      {/* So this is where the header gets cut off from the logo...need to fix 
+      {/* So this is where the header gets cut off from the logo (if you uncomment the router)...need to fix 
           Also possible remove the router and replace with a full switch case
       */}
       <h3 className="App-Title">Welcome to our React App, {this.props.name}</h3>
-      <Router>
+      {/* <Router>
           <div>
             <div className="router">
               <Header />
@@ -57,7 +57,7 @@ class App extends Component {
             <Route path="/filter" component={Filter} />
             <Route path="/new" component={UpdatedFilter} />
           </div>
-        </Router>
+        </Router> */}
       </header>
       {mainComponent}
       <p className="App-Intro">
