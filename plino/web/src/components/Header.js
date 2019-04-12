@@ -43,7 +43,7 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link disabled" href="#contact">
+                  <a className="nav-link enabled" href="#contact">
                     Contact
                   </a>
                 </li>

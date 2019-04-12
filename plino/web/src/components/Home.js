@@ -1,23 +1,29 @@
 import React, { Component } from "react";
+import "./../index";
 import "./../App.css";
 import logo from "./../images/ss.png";
 import { Link } from "react-router-dom";
+import { homedir } from "os";
+import "./../App";
 
 
 export default class Home extends Component {
     render() {
         return (
+            
             <div>
                 <section id="landing" className="linear">
                     <img className="logo" src={logo}/>
-                    <h1 className="white">Online spam filtering done easy.</h1>
+                    <h1 className="white">Welcome to Spam Scanner </h1>
+                    
                     <p className="lead white">
                         Spammy is an application made for simplifying the spam filtering process.
                         Use our FREE online service to filter out multiple messages! You can submit
                         your requests with messages seperated by commas! Support for file uploads
                         and downloads are in planning 2019!
                     </p>
-
+                   
+                    
                     <Link to="/new">
                         <input type="button" value="Try it out!" className="btn btn-lg btn-danger" />
                     </Link>
