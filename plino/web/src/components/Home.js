@@ -10,7 +10,6 @@ import "./../App";
 export default class Home extends Component {
     render() {
         return (
-            
             <div>
                 <section id="landing" className="linear">
                     <img className="logo" src={logo}/>
@@ -23,10 +22,16 @@ export default class Home extends Component {
                         and downloads are in planning 2019!
                     </p>
                    
-                    
-                    <Link to="/new">
+                    <div>
+                        <br/>
+                        <button><a href="/new">Try it out!</a></button>
+                        <br/>
+                        or you can <br/> <button><a href="/secret">logout</a></button>
+                    </div>
+                    {/* <Link to="/new">
                         <input type="button" value="Try it out!" className="btn btn-lg btn-danger" />
-                    </Link>
+                    </Link> */}
+                  
                 </section>
 
                 <section id="services" className="bg-light">

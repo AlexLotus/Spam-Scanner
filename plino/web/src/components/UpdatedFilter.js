@@ -100,6 +100,8 @@ export default class UpdatedFilter extends Component {
               <p className="lead">A spam filtering application for your inbox!</p>
             </div>
           </header>
+          <br/>
+            <button><a href="/home">Go back</a></button> or <button><a href="/secret">logout</a></button>
 
 
 <section id="about">

@@ -22,6 +22,7 @@ class App extends Component {
                 break;
             case "home":
                 mainComponent = <Home />;
+                break;
             case "callback":
                 mainComponent = <Callback />;
                 break;
@@ -48,16 +49,6 @@ class App extends Component {
           Also possible remove the router and replace with a full switch case
       */}
       <h3 className="App-Title">Welcome to our React App, {this.props.name}</h3>
-      {/* <Router>
-          <div>
-            <div className="router">
-              <Header />
-            </div>
-            <Route exact path="/" component={Home} {...this.props} />
-            <Route path="/filter" component={Filter} />
-            <Route path="/new" component={UpdatedFilter} />
-          </div>
-        </Router> */}
       </header>
       {mainComponent}
       <p className="App-Intro">
