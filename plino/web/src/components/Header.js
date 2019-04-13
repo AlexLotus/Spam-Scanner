@@ -9,7 +9,7 @@ import { faSignOutAlt, faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default class Header extends Component {
   render() {
-    const { auth } = this.props;
+    const { auth, name: userName } = this.props;
 
     return (
       <nav
@@ -61,7 +61,7 @@ export default class Header extends Component {
                         icon={faSignOutAlt}
                         style={{ marginRight: 8 }}
                       />
-                      Logout
+                      Logout {userName}
                     </Button>
                   </NavLink>
                 ) : (
