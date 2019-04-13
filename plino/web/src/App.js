@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import Filter from "./components/Filter";
 import UpdatedFilter from "./components/UpdatedFilter";
 import "./App.css";
+import Callback from "./components/Callback";
+
 
 class App extends Component {
- 
+  
 
   render() {
     return (
@@ -20,8 +21,8 @@ class App extends Component {
             </div>
 
             <Route exact path="/" component={Home} />
-            <Route path="/filter" component={Filter} />
             <Route path="/new" component={UpdatedFilter} />
+            <Route path="/callback" component={Callback} />
           </div>
         </Router>
         
