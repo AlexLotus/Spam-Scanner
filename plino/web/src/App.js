@@ -94,7 +94,7 @@ class App extends Component {
           <footer className="py-3 bg-dark">
             <div className="container col">
               <p className="m-0 text-center text-white">
-                Copyright &copy; Spammy 2019
+                Copyright &copy; Spammy-Scanner 2019
               </p>
             </div>
           </footer>
