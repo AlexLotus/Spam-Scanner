@@ -164,110 +164,120 @@ export default class UpdatedFilter extends Component {
     const { isLoaded, message, notify } = this.state;
 
     return (
-      <div>
-        <header className="bg-primary text-white">
-          <div className="container text-center">
-            <p className="lead">A spam filtering application for your inbox!</p>
-          </div>
-        </header>
+      <div className="container-fluid">
+        <div className="row flex-column">
+          <header className="bg-primary text-white">
+            <div className="container text-center">
+              <p className="lead">
+                A spam filtering application for your inbox!
+              </p>
+            </div>
+          </header>
 
-        <section id="about">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 mx-auto">
-                <img className="logo" src={logo} />
-                <p className="lead">
-                  Quickly and easily classify your text messages as spam or ham.
-                </p>
-                <div className="card">
-                  <div className="card-body">
-                    <form onSubmit={this.handleSubmit} className="text-left">
-                      <div className="form-group">
-                        <label>Message:</label>
-                        <input
-                          type="text"
-                          placeholder="Insert message here"
-                          className="form-control"
-                          onChange={this.onMessageChange}
-                          value={message}
-                        />
+          <section id="about">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-8 mx-auto">
+                  {/* <img className="logo" src={logo} /> */}
+                  <p className="lead">
+                    Quickly and easily classify your text messages as spam or
+                    ham.
+                  </p>
+                  <div className="card">
+                    <div className="card-body">
+                      <form onSubmit={this.handleSubmit} className="text-left">
+                        <div className="form-group">
+                          <label>Message:</label>
+                          <input
+                            type="text"
+                            placeholder="Insert message here"
+                            className="form-control"
+                            onChange={this.onMessageChange}
+                            value={message}
+                          />
 
-                        {notify !== "" ? (
-                          <h5 className="notify">{notify}</h5>
-                        ) : (
-                          <br />
-                        )}
-                      </div>
+                          {notify !== "" ? (
+                            <h5 className="notify">{notify}</h5>
+                          ) : (
+                            <br />
+                          )}
+                        </div>
 
-                      <div>
-                        <label for="file-upload" class="custom-file-upload">
-                          <FontAwesomeIcon
-                            className="icon"
-                            icon={faCloudUploadAlt}
-                          />{" "}
-                          Upload
-                        </label>
-                        <input
-                          id="file-upload"
-                          type="file"
-                          name="Filter Text"
-                          accept=".txt"
-                          onChange={e => this.handleChangeFile(e)}
-                        />
-
-                        <input
-                          type="submit"
-                          value="Submit"
-                          className="custom-sub btn btn-primary"
-                        />
-                      </div>
-                    </form>
-                  </div>
-                  <div className="card-footer">
-                    <strong className="m-2 black">{this.state.loading}</strong>
-                    {this.state.hamCount > 0 || this.state.spamCount > 0 ? (
-                      <div>
-                        <h2>
-                          <span className="left black">
+                        <div>
+                          <label
+                            for="file-upload"
+                            className="custom-file-upload"
+                          >
                             <FontAwesomeIcon
-                              className="icon2 green"
-                              size="xs"
-                              icon={faCheck}
+                              className="icon"
+                              icon={faCloudUploadAlt}
                             />{" "}
-                            {this.state.hamCount}
-                          </span>
-                          <span className="right black">
-                            <FontAwesomeIcon
-                              className="icon2 red"
-                              size="sm"
-                              icon={faTimes}
-                            />{" "}
-                            {this.state.spamCount}
-                          </span>
-                        </h2>
-                      </div>
-                    ) : (
-                      <br />
-                    )}
-                    {!isLoaded ? (
-                      <br />
-                    ) : (
-                      <table className="table mt-2 table-striped">
-                        <thead className="thead-dark">
-                          <tr>
-                            <th scope="col">Message</th>
-                            <th scope="col">Result</th>
-                          </tr>
-                        </thead>
-                        <tbody>{this.state.message2}</tbody>
-                      </table>
-                    )}
+                            Upload
+                          </label>
+                          <input
+                            id="file-upload"
+                            type="file"
+                            name="Filter Text"
+                            accept=".txt"
+                            onChange={e => this.handleChangeFile(e)}
+                          />
+
+                          <input
+                            type="submit"
+                            value="Submit"
+                            className="custom-sub btn btn-primary"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div className="card-footer">
+                      <strong className="m-2 black">
+                        {this.state.loading}
+                      </strong>
+                      {this.state.hamCount > 0 || this.state.spamCount > 0 ? (
+                        <div>
+                          <h2>
+                            <span className="left black">
+                              <FontAwesomeIcon
+                                className="icon2 green"
+                                size="xs"
+                                icon={faCheck}
+                              />{" "}
+                              {this.state.hamCount}
+                            </span>
+                            <span className="right black">
+                              <FontAwesomeIcon
+                                className="icon2 red"
+                                size="sm"
+                                icon={faTimes}
+                              />{" "}
+                              {this.state.spamCount}
+                            </span>
+                          </h2>
+                        </div>
+                      ) : (
+                        <br />
+                      )}
+                      {!isLoaded ? (
+                        <br />
+                      ) : (
+                        <table className="table mt-2 table-striped">
+                          <thead className="thead-dark">
+                            <tr>
+                              <th scope="col">Message</th>
+                              <th scope="col">Result</th>
+                            </tr>
+                          </thead>
+                          <tbody>{this.state.message2}</tbody>
+                        </table>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     );
   }

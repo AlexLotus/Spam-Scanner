@@ -3,7 +3,13 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  /* animation: App-logo-spin infinite 20s linear; */
+  height: 4vmin;
+  pointer-events: none;
+}
+
+.react-logo {
+  /* animation: App-logo-spin infinite 20s linear; */
   height: 4vmin;
   pointer-events: none;
 }
@@ -42,16 +48,16 @@ section {
   padding-bottom: 55px;
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
-} 
+}
 
 .logo {
   width: 250px;
 }
 
 .linear {
-  background-image: linear-gradient(90deg, #0f0c29,#302b63,#24243e);  
+  background-image: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
 }
 .white {
   color: white;
@@ -60,7 +66,7 @@ a:hover{
   margin: auto;
 }
 .red {
-  background-color: #F22613;
+  background-color: #f22613;
 }
 
 .notify {
@@ -84,7 +90,7 @@ input[type="file"] {
 }
 .custom-file-upload:hover {
   background-color: #0069d9;
-  border-color:#0062cc;
+  border-color: #0062cc;
   color: white;
 }
 
@@ -101,8 +107,6 @@ input[type="file"] {
   margin-top: -3px;
 }
 
-
-
 .right {
   padding-left: 25px;
 }
@@ -113,7 +117,7 @@ input[type="file"] {
 
 .red {
   color: red;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 .green {
   color: green;
