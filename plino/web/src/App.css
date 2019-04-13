@@ -62,3 +62,67 @@ a:hover{
 .red {
   background-color: #F22613;
 }
+
+.notify {
+  color: red;
+  font-weight: 300;
+  padding-top: 7.5px;
+  padding-left: 5px;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  vertical-align: middle;
+  overflow: hidden;
+  color: black;
+}
+.custom-file-upload:hover {
+  background-color: #0069d9;
+  border-color:#0062cc;
+  color: white;
+}
+
+.custom-sub {
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-radius: 0px;
+  vertical-align: middle;
+  overflow: hidden;
+  margin-top: -3px;
+}
+
+
+
+.right {
+  padding-left: 25px;
+}
+.icon2 {
+  width: 30px;
+  height: 30px;
+}
+
+.red {
+  color: red;
+  background-color: rgba(0,0,0,0);
+}
+.green {
+  color: green;
+}
+
+.logo {
+  width: 500px;
+}
+
+.black {
+  color: black;
+}
