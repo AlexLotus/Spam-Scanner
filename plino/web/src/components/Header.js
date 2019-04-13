@@ -1,56 +1,87 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "./../logo.svg";
+import SpamScannerLogo from "./../images/logo.png";
 import "./../App.css";
+import { Button } from "rebass";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignOutAlt, faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default class Header extends Component {
-    render() {
-        return (
-            <nav
-          className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top App-header"
-          id="mainNav"
-        >
-          <div className="container">
-            <a className="navbar-brand" href="#page-top">
-              <img src={logo} className="App-logo" alt="logo" />
-              Spam Filter
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon" />
-            </button>
-            <div className="collapse navbar-collapse" id="navbarResponsive">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link to="/">
-                    <a className="nav-link">
-                        Home
-                    </a>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/new">
-                    <a className="nav-link">
-                    Filtering
-                    </a>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link disabled" href="#contact">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
+  render() {
+    const { auth } = this.props;
+
+    return (
+      <nav
+        className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top App-header"
+        id="mainNav"
+      >
+        <div className="container">
+          <Link className="navbar-brand" to="home">
+            <img
+              src={SpamScannerLogo}
+              height={30}
+              className="d-inline-block align-top"
+              alt="logo"
+            />
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarResponsive">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <NavLink to="/home">
+                  <span className="nav-link">Home</span>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/new">
+                  <span className="nav-link">Filter</span>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="home#contact">
+                  Contact
+                </a>
+              </li>
+              <li className="nav-item">
+                {auth.isAuthenticated() ? (
+                  <NavLink to="/secret">
+                    <Button bg="transparent" color="#fe7676">
+                      <FontAwesomeIcon
+                        icon={faSignOutAlt}
+                        style={{ marginRight: 8 }}
+                      />
+                      Logout
+                    </Button>
+                  </NavLink>
+                ) : (
+                  <Button
+                    bg="transparent"
+                    color="#00deff"
+                    onClick={this.props.auth.login}
+                  >
+                    <FontAwesomeIcon
+                      icon={faSignInAlt}
+                      style={{ marginRight: 8 }}
+                    />
+                    Login
+                  </Button>
+                )}
+              </li>
+            </ul>
           </div>
-        </nav>
-        );
-    };
+        </div>
+      </nav>
+    );
+  }
 }
