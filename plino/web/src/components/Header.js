@@ -9,7 +9,6 @@ import { faSignOutAlt, faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default class Header extends Component {
   render() {
-    console.log(this.props);
     const { auth } = this.props;
 
     return (
@@ -41,12 +40,12 @@ export default class Header extends Component {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink to="/home">
-                  <a className="nav-link">Home</a>
+                  <span className="nav-link">Home</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/new">
-                  <a className="nav-link">Filter</a>
+                  <span className="nav-link">Filter</span>
                 </NavLink>
               </li>
               <li className="nav-item">
