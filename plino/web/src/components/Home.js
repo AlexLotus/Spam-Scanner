@@ -29,12 +29,6 @@ export default class Home extends Component {
                 Try it out!
               </Button>
             </Link>
-            <br />
-            <Link to="/secret">
-              <Button bg="transparent" mt={1} fontSize={1}>
-                <Text fontWeight="normal">Logout</Text>
-              </Button>
-            </Link>
           </div>
           {/* <Link to="/new">
                         <input type="button" value="Try it out!" className="btn btn-lg btn-danger" />
