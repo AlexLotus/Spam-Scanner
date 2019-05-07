@@ -27,9 +27,8 @@ class App extends Component {
             minHeight: "100vh"
           }}
         >
-         
-            <Header className="App-Header" {...this.props} />
-            
+          <Header className="App-Header" {...this.props} />
+          <div className="fixed-background" />
           <div className="container-fluid" style={{ flex: "1 1 auto" }}>
             <div
               className="row flex-xl-nowrap flex-column justify-content-start"
@@ -50,14 +49,13 @@ class App extends Component {
                 <Route path="/home" render={() => <Home {...this.props} />} />
                 <Route
                   path="/callback"
-                  render = {routerProps => 
+                  render={routerProps =>
                     isAuthed ? (
-                      <Callback {...this.props} {...routerProps}/>
+                      <Callback {...this.props} {...routerProps} />
                     ) : (
                       <NotFound />
                     )
-                }
-                  
+                  }
                 />
                 <Route
                   path="/new"
