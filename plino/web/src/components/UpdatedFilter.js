@@ -166,15 +166,15 @@ export default class UpdatedFilter extends Component {
     return (
       <div className="container-fluid">
         <div className="row flex-column">
-          <header className="bg-primary text-white">
+          <header className="bg-primary text-white pt-5 pb-2">
             <div className="container text-center">
-              <p className="lead">
+              <span className="lead">
                 A spam filtering application for your inbox!
-              </p>
+              </span>
             </div>
           </header>
 
-          <section id="about">
+          <section id="about" style={{ color: "white" }}>
             <div className="container">
               <div className="row">
                 <div className="col-lg-8 mx-auto">

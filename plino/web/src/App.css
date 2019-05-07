@@ -67,10 +67,15 @@ a:hover {
   background-image: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
 }
 */
+
+#landing {
+  max-width: 60%;
+  margin: auto;
+}
+
 .white {
   color: white;
   text-align: center;
-  max-width: 60%;
   margin: auto;
 }
 .red {
@@ -261,11 +266,9 @@ input[type="file"] {
   top: 30px;
   left: -60px;
 }
-.img {
-  width: 450px;
-}
-.imgf {
-  width: 400px;
+
+.howto-gif {
+  width: 100%;
 }
 
 .spam-list thead {
