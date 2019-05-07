@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Spam-Scanner/precache-manifest.a3fc4d12e2732895d209e95300e6e023.js"
+  "/Spam-Scanner/plino/web/precache-manifest.a9818178b3fdffd4fd57b33855ee08a9.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Spam-Scanner/index.html", {
+workbox.routing.registerNavigationRoute("/Spam-Scanner/plino/web/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
