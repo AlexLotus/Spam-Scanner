@@ -189,7 +189,7 @@ export default class Home extends Component {
                     >
                       <div className="container">
                         <div className="row">
-                          <div className="col-lg-8 mx-auto">
+                          <div>
                             <h2>How to use the site</h2>
                             <p className="lead">
                               <div>
@@ -197,20 +197,18 @@ export default class Home extends Component {
                                   <div>
                                     {"follow the instructions."}
                                   </div>
-                                  <div>{"1. Click the filter tab "}</div>
-                                  <div>
-                                    {"2. Type in some text (comma deliniated) click submit"}
-                                  </div>
+                                  1. Click the filter tab 
+                                  2. Type in some text (comma deliniated) click submit
                                   </p>
                                   <p class="text-center">
-                                  <img src="https://media.giphy.com/media/eidVWXlVIU1xa6ACIn/giphy.gif" alt="..." class="https://media.giphy.com/media/eidVWXlVIU1xa6ACIn/giphy.gif"></img>
+                                  <img className="img" src="https://media.giphy.com/media/eidVWXlVIU1xa6ACIn/giphy.gif" alt="..."></img>
                                   </p>
                                   <div>
                                   <p class="text-left">
-                                    {"2a. Upload some text from a .txt file by clicking the upload button on the screen."}
+                                    "2a. Upload some text from a .txt file by clicking the upload button on the screen."
                                     </p>
-                                    <p class="text-center">
-                                  <img src="https://media.giphy.com/media/LNxIrM4WZtW8WRgoXE/giphy.gif" alt="..." class="https://media.giphy.com/media/LNxIrM4WZtW8WRgoXE/giphy.gif"></img>
+                                  <p class="text-center">
+                                  <img className="img" src="https://media.giphy.com/media/LNxIrM4WZtW8WRgoXE/giphy.gif" alt="..."></img>
                                   </p>
                                   </div>
                                 
