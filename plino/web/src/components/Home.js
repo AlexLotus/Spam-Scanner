@@ -141,31 +141,40 @@ export default class Home extends Component {
                       <div className="container">
                         <div className="row">
                           <div className="col-lg-8 mx-auto">
-                            <h2>Download</h2>
+                            <h2>Installation</h2>
+                            <p className="lead">
+                              <a href="https://docs.google.com/document/d/1dnvha1Wa_eztyvEsedWoZYJfITSkp85ARqqSUI8T_0Q/edit#">
+                                <button type="button" class="btn btn-info">
+                                  Spam-Scanner Instructions
+                                </button>
+                                </a>
+                                </p>
+                                <h2>Downloads</h2>
                             <p className="lead">
                               <a href="https://github.com/AlexLotus/Spam-Scanner">
                                 <button type="button" class="btn btn-info">
-                                  Spam-Scanner Download
+                                  Spam-Scanner 
                                 </button>
-                                <button
-                                  class="btn btn-success"
-                                  onclick=" window.open('http://google.com','_blank')"
-                                >
-                                  {" "}
-                                  Spam Scanner Instructions
-                                </button>
+
                                 <p className="lead">
                                   <a href="https://nodejs.org/en/download/">
                                     <button type="button" class="btn btn-info">
-                                      Node.js download
+                                      Node.js 
                                     </button>
-                                    <button
-                                      class="btn btn-success"
-                                      onclick=" window.open('https://blog.teamtreehouse.com/install-node-js-npm-windows','_blank')"
-                                    >
-                                      {" "}
-                                      Node.js instruction
+                                    <p className="lead">
+                              <a href="https://desktop.github.com/">
+                                <button type="button" class="btn btn-info">
+                                  Github Desktop
+                                </button>
+                                <p className="lead">
+                                  <a href="https://code.visualstudio.com/download">
+                                    <button type="button" class="btn btn-info">
+                                      Visual Studio Code
                                     </button>
+                                  </a>
+                                  </p>
+                                  </a>
+                                  </p>
                                   </a>
                                 </p>
                               </a>
@@ -181,27 +190,30 @@ export default class Home extends Component {
                       <div className="container">
                         <div className="row">
                           <div className="col-lg-8 mx-auto">
-                            <h2>How to use</h2>
+                            <h2>How to use the site</h2>
                             <p className="lead">
                               <div>
                                 <p class="text-left">
                                   <div>
-                                    {
-                                      "It's simple, just follow the instructions."
-                                    }
+                                    {"follow the instructions."}
                                   </div>
                                   <div>{"1. Click the filter tab "}</div>
                                   <div>
-                                    {
-                                      "2. Type in some text (comma deliniated) click submit"
-                                    }
+                                    {"2. Type in some text (comma deliniated) click submit"}
                                   </div>
+                                  </p>
+                                  <p class="text-center">
+                                  <img src="https://media.giphy.com/media/eidVWXlVIU1xa6ACIn/giphy.gif" alt="..." class="https://media.giphy.com/media/eidVWXlVIU1xa6ACIn/giphy.gif"></img>
+                                  </p>
                                   <div>
-                                    {
-                                      "2a. Upload some text from a .txt file by clicking the upload button on the screen."
-                                    }
+                                  <p class="text-left">
+                                    {"2a. Upload some text from a .txt file by clicking the upload button on the screen."}
+                                    </p>
+                                    <p class="text-center">
+                                  <img src="https://media.giphy.com/media/LNxIrM4WZtW8WRgoXE/giphy.gif" alt="..." class="https://media.giphy.com/media/LNxIrM4WZtW8WRgoXE/giphy.gif"></img>
+                                  </p>
                                   </div>
-                                </p>
+                                
                               </div>
                             </p>
                           </div>
