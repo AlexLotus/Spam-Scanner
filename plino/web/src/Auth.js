@@ -2,7 +2,7 @@
 import auth0 from "auth0-js";
 import jwtDecode from "jwt-decode";
 
-const LOGIN_SUCCESS_PAGE = "/secret";
+const LOGIN_SUCCESS_PAGE = "/filter";
 const LOGIN_FAILURE_PAGE = "/";
 
 export default class Auth {

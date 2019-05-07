@@ -66,7 +66,7 @@ class App extends Component {
                   )}
                 />
                 <Route
-                  path="/new"
+                  path="/filter"
                   render={() =>
                     isAuthed ? (
                       <AuthedFilter {...this.props} />
@@ -76,7 +76,7 @@ class App extends Component {
                   }
                 />
                 <Route
-                  path="/filter"
+                  path="/oldfilter"
                   render={() =>
                     isAuthed ? (
                       <AuthedFilter {...this.props} />

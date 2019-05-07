@@ -66,7 +66,7 @@ export default class Header extends Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/new">
+                <NavLink to="/filter">
                   <span className="nav-link">Filter</span>
                 </NavLink>
               </li>
