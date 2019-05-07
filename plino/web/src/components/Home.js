@@ -33,7 +33,7 @@ export default class Home extends Component {
 
           <div>
             <br />
-            <Link to="/new">
+            <Link to="/filter">
               <Button bg="#00deff" px={[3, 5]} py={[2, 3]}>
                 Try it out!
               </Button>
