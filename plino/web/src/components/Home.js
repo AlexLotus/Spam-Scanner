@@ -44,7 +44,7 @@ export default class Home extends Component {
                     </Link> */}
         </section>
 
-        <section id="contact" className="white">
+        <section className="white">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 mx-auto">
@@ -163,7 +163,7 @@ export default class Home extends Component {
                     </div>
                   </div>
                 </section>
-                <h2>About us</h2>
+                <h2 id="contact">About us </h2>
                 <p className="lead">
                   This product was created during a senior project at the
                   Univeristy of Central Missouri, created by Alex Kondratenko,
