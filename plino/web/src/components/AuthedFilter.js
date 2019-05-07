@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Flex } from "rebass";
 import logo from "./../images/logo.png";
 
 export default class UpdatedFilter extends Component {
@@ -20,6 +21,20 @@ export default class UpdatedFilter extends Component {
       hamCount: 0,
       spamCount: 0
     };
+  }
+
+  componentDidMount() {
+    const navElem = document.getElementById("main-nav");
+
+    const curClassNames = navElem.className;
+    navElem.className = curClassNames + " scrolled";
+  }
+
+  componentWillUnmount() {
+    const navElem = document.getElementById("main-nav");
+    const curClassNames = navElem.className;
+    const newClassName = curClassNames.replace(/scrolled/, "");
+    navElem.className = newClassName;
   }
 
   // Reset the state
@@ -165,8 +180,13 @@ export default class UpdatedFilter extends Component {
 
     return (
       <div
-        className="container-fluid flex-column py-0"
-        style={{ height: "100%", display: "flex", flex: "1 1 auto" }}
+        className="container-fluid flex-column bg-light"
+        style={{
+          height: "calc(100vh - 56px)",
+          display: "flex",
+          flex: "1 1 auto",
+          paddingTop: 60
+        }}
       >
         <div className="row flex-column">
           <div className="bg-light w-100 px-5 py-2 border-bottom">
@@ -211,40 +231,48 @@ export default class UpdatedFilter extends Component {
           </div>
         </div>
 
-        <div className="row flex-row flex-grow-1">
+        <div
+          className="row flex-row flex-grow-1 spam-list"
+          style={{ flex: "1 1 auto", overflow: "hidden" }}
+        >
           {isLoaded ? (
             <>
-              <div className="w-50 border-right">
-                <strong className="m-2 black">{this.state.loading}</strong>
-                {this.state.hamCount > 0 || this.state.spamCount > 0 ? (
-                  <div>
-                    <h2>
-                      <span className="left black">
-                        <FontAwesomeIcon
-                          className="icon2 green"
-                          size="xs"
-                          icon={faCheck}
-                        />{" "}
-                        {this.state.hamCount}
-                      </span>
-                      <span className="right black">
-                        <FontAwesomeIcon
-                          className="icon2 red"
-                          size="sm"
-                          icon={faTimes}
-                        />{" "}
-                        {this.state.spamCount}
-                      </span>
-                    </h2>
-                  </div>
-                ) : (
-                  <br />
-                )}
+              <div
+                className="flex w-50 m-auto"
+                style={{ overflow: "auto", height: "100%" }}
+              >
+                <Flex justifyContent="flex-start" mt="3">
+                  <strong className="m-2 black">{this.state.loading}</strong>
+                  {this.state.hamCount > 0 || this.state.spamCount > 0 ? (
+                    <div className="ml-auto">
+                      <h2>
+                        <span className="left black">
+                          <FontAwesomeIcon
+                            className="icon2 green"
+                            size="xs"
+                            icon={faCheck}
+                          />{" "}
+                          {this.state.hamCount}
+                        </span>
+                        <span className="right black">
+                          <FontAwesomeIcon
+                            className="icon2 red"
+                            size="sm"
+                            icon={faTimes}
+                          />{" "}
+                          {this.state.spamCount}
+                        </span>
+                      </h2>
+                    </div>
+                  ) : (
+                    <br />
+                  )}
+                </Flex>
                 {!isLoaded ? (
                   <br />
                 ) : (
                   <table className="table mt-2 table-striped">
-                    <thead className="thead-dark">
+                    <thead className="thead-light">
                       <tr>
                         <th scope="col">Message</th>
                         <th scope="col">Result</th>
@@ -253,12 +281,6 @@ export default class UpdatedFilter extends Component {
                     <tbody>{this.state.message2}</tbody>
                   </table>
                 )}
-              </div>
-
-              <div className="w-50">
-                <p className="lead text-muted">
-                  Move spam messages to delete here...
-                </p>
               </div>
             </>
           ) : (

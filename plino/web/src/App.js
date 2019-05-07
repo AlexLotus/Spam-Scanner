@@ -22,6 +22,7 @@ import logo from "./logo.svg";
 class App extends Component {
   render() {
     const { auth } = this.props;
+    console.log(this.props);
     const isAuthed = auth.isAuthenticated();
 
     return (
@@ -42,11 +43,7 @@ class App extends Component {
               style={{ minHeight: "100%" }}
             >
               <Switch>
-                <Route
-                  path="/"
-                  exact
-                  render={() => <Redirect to="/home" {...this.props} />}
-                />
+                <Route path="/" exact render={() => <Main {...this.props} />} />
                 <Route
                   path="/secret"
                   render={routerProps =>
@@ -60,13 +57,9 @@ class App extends Component {
                 <Route path="/home" render={() => <Home {...this.props} />} />
                 <Route
                   path="/callback"
-                  render={routerProps =>
-                    isAuthed ? (
-                      <Callback {...this.props} {...routerProps} />
-                    ) : (
-                      <NotFound />
-                    )
-                  }
+                  render={routerProps => (
+                    <Callback {...this.props} {...routerProps} />
+                  )}
                 />
                 <Route
                   path="/new"

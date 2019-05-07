@@ -14,7 +14,6 @@ export default class Header extends Component {
 
   onTargetScroll = e => {
     const { target } = e;
-    console.log(target == window);
     const documentElement = document.documentElement || document.body;
     const navElem = document.getElementById("main-nav");
 
