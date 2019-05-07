@@ -7,10 +7,10 @@ const LOGIN_FAILURE_PAGE = "/";
 
 export default class Auth {
     auth0 = new auth0.WebAuth({
-        domain: "spamscanner.auth0.com",
-        clientID: "QmisogzA7p2iTpI9zX00EcPZa2Afe8I1",
+        domain: "spamscanner1.auth0.com",
+        clientID: "A9d4olMwKqQ2BW2G46E0EUPY2iEQfQ5e",
         redirectUri: "http://localhost:3000/callback",
-        audience: "https://spamscanner.auth0.com/userinfo",
+        audience: "https://spam-scanner1.auth0.com/api/v2/",
         responseType: "token id_token",
         scope: "openid profile"
     });
