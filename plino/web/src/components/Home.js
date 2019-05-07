@@ -82,7 +82,7 @@ export default class Home extends Component {
                       </Text>
                       <Image
                         width={[1, 1, 1 / 2]}
-                        src="https://myedu-images-prod01.s3.amazonaws.com/7642067-4f5c833b084f0ca3027dcaf748625689-thumb"
+                        src="https://myedu-images-prod01.s3.amazonaws.com/7642067-49a35f88cdd17d8e1e0370b1048b46d0-thumb"
                         borderRadius={8}
                       />
                     </Box>
