@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Filter from "./components/Filter";
@@ -36,7 +42,11 @@ class App extends Component {
               style={{ minHeight: "100%" }}
             >
               <Switch>
-                <Route path="/" exact render={() => <Main {...this.props} />} />
+                <Route
+                  path="/"
+                  exact
+                  render={() => <Redirect to="/home" {...this.props} />}
+                />
                 <Route
                   path="/secret"
                   render={routerProps =>

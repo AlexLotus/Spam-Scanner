@@ -204,7 +204,7 @@ input[type="file"] {
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(45px, -50px);
+    transform: translate(35px, -40px);
   }
   80% {
     transform: translate(0, 0);
@@ -215,7 +215,7 @@ input[type="file"] {
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(80px, -90px);
+    transform: translate(70px, -80px);
   }
   90% {
     transform: translate(0, 0);
@@ -225,8 +225,10 @@ input[type="file"] {
 .about-header-img {
   display: block;
   position: relative;
-  height: 500px;
-  width: 100%;
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  transform: scale(0.9);
 }
 
 .img1 {
@@ -236,8 +238,8 @@ input[type="file"] {
   animation-delay: 0;
   width: 500px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30px;
+  left: -60px;
 }
 .img2 {
   animation-name: moveup2;
@@ -246,8 +248,8 @@ input[type="file"] {
   animation-delay: 200ms;
   width: 500px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30px;
+  left: -60px;
 }
 .img3 {
   animation-name: moveup3;
@@ -256,6 +258,6 @@ input[type="file"] {
   animation-delay: 400ms;
   width: 500px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30px;
+  left: -60px;
 }
