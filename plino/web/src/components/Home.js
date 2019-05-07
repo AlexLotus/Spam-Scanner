@@ -58,7 +58,11 @@ export default class Home extends Component {
                         <div className="col-lg-8 mx-auto">
                           <h2>Installation</h2>
                           <p className="lead">
-                            <a href="https://docs.google.com/document/d/1dnvha1Wa_eztyvEsedWoZYJfITSkp85ARqqSUI8T_0Q/edit#">
+                            <a
+                              href="https://docs.google.com/document/d/1dnvha1Wa_eztyvEsedWoZYJfITSkp85ARqqSUI8T_0Q/edit#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >
                               <button type="button" class="btn btn-info">
                                 Spam-Scanner Instructions
                               </button>
