@@ -49,6 +49,16 @@ export default class Header extends Component {
                 </NavLink>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="home#HowTo">
+                  How To
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="home#Download">
+                  Download
+                </a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="home#contact">
                   Contact
                 </a>
