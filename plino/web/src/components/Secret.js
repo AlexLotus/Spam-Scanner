@@ -25,7 +25,7 @@ export default class Secret extends Component {
   render() {
     const { timer } = this.state;
     return (
-      <Box py={5}>
+      <Box py={5} color="white">
         It's a secret. Now you can go <a href="/home">Home</a>.
         <p>Redirecting home in {timer} seconds...</p>
         <br />
