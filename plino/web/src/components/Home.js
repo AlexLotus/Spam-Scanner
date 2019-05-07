@@ -35,32 +35,114 @@ export default class Home extends Component {
                     </Link> */}
         </section>
 
-        <section id="services" className="bg-light">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 mx-auto">
-                <h2>Services we offer</h2>
-                <p className="lead">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-                  optio velit inventore, expedita quo laboriosam possimus ea
-                  consequatur vitae, doloribus consequuntur ex. Nemo assumenda
-                  laborum vel, labore ut velit dignissimos.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         <section id="contact">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 mx-auto">
-                <h2>Contact us</h2>
+                <h2>About us</h2>
                 <p className="lead">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-                  odio fugiat voluptatem dolor, provident officiis, id iusto!
-                  Obcaecati incidunt, qui nihil beatae magnam et repudiandae
-                  ipsa exercitationem, in, quo totam.
+                  This product was created during a senior project at the Univeristy of Central Missouri,
+                  created by Alex Kondratenko, Kishan Polekar, 
+                  Shane-Lewes Tenorio, and Ryan Charles. 
+                  <Text
+                    fontSize={[ 3, 4, 5 ]}
+                    fontWeight='bold'
+                    color='lightblue'>
+                    Alex Kondratenko
+                  </Text>
+
+                  <Image
+                    width={[ 1, 1, 1/2 ]}
+                    src='https://avatars1.githubusercontent.com/u/16922103?s=400&v=4'
+                    borderRadius={8}
+                  />
+                  <Text
+                    fontSize={[ 3, 4, 5 ]}
+                    fontWeight='bold'
+                    color='lightblue'>
+                    Kishan Polekar
+                  </Text>
+                  <Image
+                    width={[ 1, 1, 1/2 ]}
+                    src='https://media.licdn.com/dms/image/C5603AQGJaMyJf34p1A/profile-displayphoto-shrink_800_800/0?e=1562803200&v=beta&t=KCsGLy11g63isr7y2rHhq02hUj8SUtQG-NZUuJos8v4'
+                    borderRadius={8}
+                  />
+                   <Text
+                    fontSize={[ 3, 4, 5 ]}
+                    fontWeight='bold'
+                    color='lightblue'>
+                    Ryan Charles
+                  </Text>
+                  <Image
+                    width={[ 1, 1, 1/2 ]}
+                    src='https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/61901_10151524487449966_624369307_n.jpg?_nc_cat=101&_nc_ht=scontent.fmkc1-1.fna&oh=7341f3e7f3e6b2f984d73915e12d03cb&oe=5D2A84D0'
+                    borderRadius={8}
+                  />
+                  <Text
+                    fontSize={[ 3, 4, 5 ]}
+                    fontWeight='bold'
+                    color='lightblue'>
+                    Shane Lewes-Tenorio
+                  </Text>
+                  <Image
+                    width={[ 1, 1, 1/2 ]}
+                    src='https://media.licdn.com/dms/image/C4E03AQGr7zrLfcfdZg/profile-displayphoto-shrink_800_800/0?e=1562803200&v=beta&t=Pu98sWZ8GkzZXU1bLwVDWaVs4_4lSTqmCK5ZRCMrtYU'
+                    borderRadius={8}
+                  />
+                 < Text
+                    fontSize={[ 10, 10, 2 ]}
+                    fontWeight='bold'
+                    color='dark'>
+                    And
+                 </Text>
+                  <Text
+                    fontSize={[ 3, 4, 5 ]}
+                    fontWeight='bold'
+                    color='lightblue'>
+                    Dr. Yui Man Lui
+                  </Text>
+                  <Image
+                    width={[ 1, 1, 1/2 ]}
+                    src='https://www.ucmo.edu/college-of-health-science-and-technology/school-of-computer-science-and-mathematics/computer-science-and-software-engineering/faculty/yui-man-lui/lui.png'
+                    borderRadius={8}
+                  />
+                  <section id="Download" className="bg-light">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 mx-auto">
+                <h2>Download</h2>
+                <p className="lead">
+                
+                https://github.com/AlexLotus/Spam-Scanner
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+          <section id="HowTo" className="bg-light">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 mx-auto">
+                <h2>How to use</h2>
+                <p className="lead">
+                <div>
+                <div>{"It's simple and probably the easiest thing you will ever do."}</div>
+                <div>{"1. Click the filter tab "}</div>
+                <div>{"2. Type in some text (comma deliniated) click submit"}</div>
+                <div>{"2a. Upload some text from a .txt file by clicking the upload button on the screen."}</div>
+            </div>
+                   
+                  
+                  
+                 
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
                 </p>
               </div>
             </div>

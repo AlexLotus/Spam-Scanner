@@ -64,7 +64,14 @@ class App extends Component {
                 <Route path="/home" render={() => <Home {...this.props} />} />
                 <Route
                   path="/callback"
-                  render={() => <Callback {...this.props} />}
+                  render = {routerProps => 
+                    isAuthed ? (
+                      <Callback {...this.props} {...routerProps}/>
+                    ) : (
+                      <NotFound />
+                    )
+                }
+                  
                 />
                 <Route
                   path="/new"
