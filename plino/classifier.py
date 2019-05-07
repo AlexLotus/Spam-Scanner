@@ -16,7 +16,7 @@ import logging
 from tabulate import tabulate
 
 logging.basicConfig(
-    filename='../logfiles/logfile.txt',
+    filename='./logfiles/logfile.txt',
     level=logging.DEBUG,
     filemode='w',
     format='%(asctime)s - %(levelname)s - %(message)s'
@@ -190,7 +190,7 @@ class NaiveBayesClassifier(object):
         :param self: class object
         """
         list_of_lists = [list(elem) for elem in self.classification.items()]
-        print (tabulate(
+        print(tabulate(
             list_of_lists,
             headers=['Label', 'Score'],
             tablefmt='orgtbl'
