@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Filter from "./components/Filter";
 import UpdatedFilter from "./components/UpdatedFilter";
 import AuthedFilter from "./components/AuthedFilter";
+import "./bootstrap-override.css";
 import "./App.css";
 import NotFound from "./components/NotFound";
 import Secret from "./components/Secret";

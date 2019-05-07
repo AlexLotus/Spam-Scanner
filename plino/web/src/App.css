@@ -1,3 +1,4 @@
+/* App CSS */
 .App {
   text-align: center;
 }
@@ -151,6 +152,15 @@ input[type="file"] {
   z-index: -1;
 }
 
+#main-nav {
+  transition: background-color 0.3s ease;
+}
+
+#main-nav.scrolled {
+  background-color: rgba(17, 18, 20, 0.92);
+  backdrop-filter: blur(50px) saturate(2);
+}
+
 .navbar.transparent.navbar-inverse .navbar-inner {
   border-width: 0px;
   -webkit-box-shadow: 0px 0px;
@@ -179,63 +189,73 @@ input[type="file"] {
   background-color: #111214;
 }
 @keyframes moveup {
-  0% {
+  10% {
     transform: translate(0px, 0px);
   }
   50% {
     transform: translate(15px, -25px);
   }
-  100% {
+  90% {
     transform: translate(0px, 0px);
   }
 }
 @keyframes moveup2 {
-  0% {
-    transform: translate(20px, -30px);
+  10% {
+    transform: translate(0, 0);
   }
   50% {
-    transform: translate(55px, -65px);
+    transform: translate(45px, -50px);
   }
-  100% {
-    transform: translate(20px, -30px);
+  80% {
+    transform: translate(0, 0);
   }
 }
 @keyframes moveup3 {
   0% {
-    transform: translate(60px, -70px);
+    transform: translate(0, 0);
   }
   50% {
-    transform: translate(90px, -100px);
+    transform: translate(80px, -90px);
   }
-  100% {
-    transform: translate(60px, -70px);
+  90% {
+    transform: translate(0, 0);
   }
+}
+
+.about-header-img {
+  display: block;
+  position: relative;
+  height: 500px;
+  width: 100%;
 }
 
 .img1 {
   animation-name: moveup;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+  animation-delay: 0;
   width: 500px;
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 0;
+  left: 0;
 }
 .img2 {
   animation-name: moveup2;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+  animation-delay: 200ms;
   width: 500px;
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 0;
+  left: 0;
 }
 .img3 {
   animation-name: moveup3;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+  animation-delay: 400ms;
   width: 500px;
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 0;
+  left: 0;
 }
