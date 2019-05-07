@@ -15,7 +15,13 @@ export default class Home extends Component {
     return (
       <div>
         <section id="landing" className="linear">
-          <Image width={[1 / 3, 1 / 3, 1 / 4]} src={logo} />
+          {/* <Image width={[1 / 3, 1 / 3, 1 / 4]} src={logo} /> */}
+
+          <div className="about-header-img">
+            <Image src={img1} className="img1" />
+            <Image src={img2} className="img2" />
+            <Image src={img3} className="img3" />
+          </div>
           <h1 className="white">Welcome to Spam Scanner </h1>
 
           <p className="lead white">
@@ -42,11 +48,6 @@ export default class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-8 mx-auto">
-                <div className="about-header-img">
-                  <Image src={img1} className="img1" />
-                  <Image src={img2} className="img2" />
-                  <Image src={img3} className="img3" />
-                </div>
                 <h2>About us</h2>
                 <p className="lead">
                   This product was created during a senior project at the
