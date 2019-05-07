@@ -51,6 +51,7 @@ export default class Home extends Component {
               <div className="col-lg-8 mx-auto">
                 <h2>About us</h2>
                 <p className="lead">
+
                   This product was created during a senior project at the Univeristy of Central Missouri,
                   created by Alex Kondratenko, Kishan Polekar, 
                   Shane-Lewes Tenorio, and Ryan Charles. 
@@ -121,9 +122,17 @@ export default class Home extends Component {
             <div className="row">
               <div className="col-lg-8 mx-auto">
                 <h2>Download</h2>
-                <p className="lead">
-                
-                https://github.com/AlexLotus/Spam-Scanner
+                  <p className="lead">
+                  <a href="https://github.com/AlexLotus/Spam-Scanner" >
+                  <button type="button" class="btn btn-info">Spam-Scanner Download</button>
+                  <button class="btn btn-success" onclick=" window.open('http://google.com','_blank')"> Spam Scanner Instructions</button>
+                  <p className="lead">
+                  <a href="https://nodejs.org/en/download/" >
+                  <button type="button" class="btn btn-info">Node.js download</button>
+                  <button class="btn btn-success" onclick=" window.open('https://blog.teamtreehouse.com/install-node-js-npm-windows','_blank')"> Node.js instruction</button>
+                </a>  
+                </p>
+                </a>
                 </p>
               </div>
             </div>
@@ -136,10 +145,12 @@ export default class Home extends Component {
                 <h2>How to use</h2>
                 <p className="lead">
                 <div>
-                <div>{"It's simple and probably the easiest thing you will ever do."}</div>
+                  <p class="text-left">
+                <div>{"It's simple, just follow the instructions."}</div>
                 <div>{"1. Click the filter tab "}</div>
                 <div>{"2. Type in some text (comma deliniated) click submit"}</div>
                 <div>{"2a. Upload some text from a .txt file by clicking the upload button on the screen."}</div>
+                </p>
             </div>
                    
                   
