@@ -48,6 +48,117 @@ export default class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-8 mx-auto">
+                <section>
+                  <div
+                    id="Download"
+                    className="bg-light black mt-5 py-5 rounded"
+                  >
+                    <div className="container">
+                      <div className="row">
+                        <div className="col-lg-8 mx-auto">
+                          <h2>Installation</h2>
+                          <p className="lead">
+                            <a href="https://docs.google.com/document/d/1dnvha1Wa_eztyvEsedWoZYJfITSkp85ARqqSUI8T_0Q/edit#">
+                              <button type="button" class="btn btn-info">
+                                Spam-Scanner Instructions
+                              </button>
+                            </a>
+                          </p>
+                          <h2>Downloads</h2>
+                          <p className="lead">
+                            <Flex justifyContent="space-around" flexWrap="wrap">
+                              <a
+                                href="https://github.com/AlexLotus/Spam-Scanner"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="my-2"
+                              >
+                                <button type="button" class="btn btn-info">
+                                  Spam-Scanner
+                                </button>
+                              </a>
+                              <a
+                                href="https://nodejs.org/en/download/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="my-2"
+                              >
+                                <button type="button" class="btn btn-info">
+                                  Node.js
+                                </button>
+                              </a>
+                              <a
+                                href="https://desktop.github.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="my-2"
+                              >
+                                <button type="button" class="btn btn-info">
+                                  Github Desktop
+                                </button>
+                              </a>
+                              <a
+                                href="https://code.visualstudio.com/download"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="my-2"
+                              >
+                                <button type="button" class="btn btn-info">
+                                  Visual Studio Code
+                                </button>
+                              </a>
+                            </Flex>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="HowTo"
+                    className="bg-light black my-2 py-5 px-5 rounded"
+                  >
+                    <div className="container">
+                      <div className="row">
+                        <div>
+                          <h2>How to use the site</h2>
+                          <p className="lead">
+                            <div>
+                              <p class="text-left">
+                                <strong>Instructions to follow:</strong>
+                                <br />
+                                <ol>
+                                  <li>Click the filter tab </li>
+                                  <li>Type in some text (comma deliniated)</li>
+                                  <p class="text-center">
+                                    <img
+                                      className="img howto-gif"
+                                      src="https://media.giphy.com/media/eidVWXlVIU1xa6ACIn/giphy.gif"
+                                      alt="..."
+                                    />
+                                  </p>
+                                  <div>
+                                    <p class="text-left">
+                                      or upload some text from a .txt file by
+                                      clicking the upload button on the screen."
+                                    </p>
+                                    <p class="text-center">
+                                      <img
+                                        className="img howto-gif"
+                                        src="https://media.giphy.com/media/LNxIrM4WZtW8WRgoXE/giphy.gif"
+                                        alt="..."
+                                      />
+                                    </p>
+                                  </div>
+                                  <li>Click Submit</li>
+                                </ol>
+                              </p>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
                 <h2>About us</h2>
                 <p className="lead">
                   This product was created during a senior project at the
@@ -165,92 +276,6 @@ export default class Home extends Component {
                       borderRadius={8}
                     />
                   </Box>
-                  <section>
-                    <div
-                      id="Download"
-                      className="bg-light black mt-5 py-5 rounded"
-                    >
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-lg-8 mx-auto">
-                            <h2>Installation</h2>
-                            <p className="lead">
-                              <a href="https://docs.google.com/document/d/1dnvha1Wa_eztyvEsedWoZYJfITSkp85ARqqSUI8T_0Q/edit#">
-                                <button type="button" class="btn btn-info">
-                                  Spam-Scanner Instructions
-                                </button>
-                                </a>
-                                </p>
-                                <h2>Downloads</h2>
-                            <p className="lead">
-                              <a href="https://github.com/AlexLotus/Spam-Scanner">
-                                <button type="button" class="btn btn-info">
-                                  Spam-Scanner 
-                                </button>
-
-                                <p className="lead">
-                                  <a href="https://nodejs.org/en/download/">
-                                    <button type="button" class="btn btn-info">
-                                      Node.js 
-                                    </button>
-                                    <p className="lead">
-                              <a href="https://desktop.github.com/">
-                                <button type="button" class="btn btn-info">
-                                  Github Desktop
-                                </button>
-                                <p className="lead">
-                                  <a href="https://code.visualstudio.com/download">
-                                    <button type="button" class="btn btn-info">
-                                      Visual Studio Code
-                                    </button>
-                                  </a>
-                                  </p>
-                                  </a>
-                                  </p>
-                                  </a>
-                                </p>
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      id="HowTo"
-                      className="bg-light black my-2 py-5 rounded"
-                    >
-                      <div className="container">
-                        <div className="row">
-                          <div>
-                            <h2>How to use the site</h2>
-                            <p className="lead">
-                              <div>
-                                <p class="text-left">
-                                  <div>
-                                    {"follow the instructions."}
-                                  </div>
-                                  1. Click the filter tab 
-                                  2. Type in some text (comma deliniated) click submit
-                                  </p>
-                                  <p class="text-center">
-                                  <img className="img" src="https://media.giphy.com/media/eidVWXlVIU1xa6ACIn/giphy.gif" alt="..."></img>
-                                  </p>
-                                  <div>
-                                  <p class="text-left">
-                                    "2a. Upload some text from a .txt file by clicking the upload button on the screen."
-                                    </p>
-                                  <p class="text-center">
-                                  <img className="img" src="https://media.giphy.com/media/LNxIrM4WZtW8WRgoXE/giphy.gif" alt="..."></img>
-                                  </p>
-                                  </div>
-                                
-                              </div>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
                 </p>
               </div>
             </div>

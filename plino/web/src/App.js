@@ -43,7 +43,11 @@ class App extends Component {
               style={{ minHeight: "100%" }}
             >
               <Switch>
-                <Route path="/" exact render={() => <Main {...this.props} />} />
+                <Route
+                  path="/"
+                  exact
+                  render={() => <Redirect to="/home" {...this.props} />}
+                />
                 <Route
                   path="/secret"
                   render={routerProps =>
