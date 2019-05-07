@@ -59,7 +59,7 @@ export default class Home extends Component {
                           <h2>Installation</h2>
                           <p className="lead">
                             <a
-                              href="https://docs.google.com/document/d/1dnvha1Wa_eztyvEsedWoZYJfITSkp85ARqqSUI8T_0Q/edit#"
+                              href="https://docs.google.com/document/d/1dnvha1Wa_eztyvEsedWoZYJfITSkp85ARqqSUI8T_0Q/edit?usp=sharing"
                               target="_blank"
                               rel="noopener noreferrer"
                               >
