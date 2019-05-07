@@ -13,7 +13,7 @@ export default class Header extends Component {
 
     return (
       <nav
-        className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top App-header"
+        className="navbar transparent navbar-expand-lg fixed-top App-header"
         id="mainNav"
       >
         <div className="container">

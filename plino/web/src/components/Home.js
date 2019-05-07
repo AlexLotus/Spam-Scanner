@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./../index";
 import "./../App.css";
 import logo from "./../images/ss.png";
+import img1 from "./../images/img1.png";
+import img2 from "./../images/img2.png";
+import img3 from "./../images/img3.png";
 import { Link } from "react-router-dom";
 import { homedir } from "os";
 import "./../App";
@@ -10,7 +13,7 @@ import { Button, Image, Text } from "rebass";
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="gray">
         <section id="landing" className="linear">
           <Image width={[1 / 3, 1 / 3, 1 / 4]} src={logo} />
           <h1 className="white">Welcome to Spam Scanner </h1>
@@ -37,7 +40,12 @@ export default class Home extends Component {
 
         
 
-        <section id="contact">
+        <section id="contact" className="gray">
+          <Image src={img1} className="img1" />
+          <Image src={img2} className="img2" />
+          <Image src={img3} className="img3" />
+        
+        
           <div className="container">
             <div className="row">
               <div className="col-lg-8 mx-auto">

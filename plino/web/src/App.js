@@ -27,23 +27,9 @@ class App extends Component {
             minHeight: "100vh"
           }}
         >
-          <nav
-            className="navbar navbar-expand-lg navbar-dark bg-dark App-header"
-            id="mainNav"
-          >
+         
             <Header className="App-Header" {...this.props} />
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            {/* So this is where the header gets cut off from the logo (if you uncomment the router)...need to fix 
-          Also possible remove the router and replace with a full switch case
-      */}
-            {/* <h3 className="App-Title">
-                Welcome to our React App, {this.props.name}
-              </h3> */}
-            {/* </Header> */}
-            <p className="App-Intro">
-              It's the greatest thing you never knew you needed
-            </p>
-          </nav>
+            
           <div className="container-fluid" style={{ flex: "1 1 auto" }}>
             <div
               className="row flex-xl-nowrap flex-column justify-content-start"
