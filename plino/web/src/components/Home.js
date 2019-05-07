@@ -59,11 +59,18 @@ export default class Home extends Component {
                     mx={[1, 2, "-200px"]}
                     padding={2}
                   >
-                    <Box width={[1, "50%"]} my={2}>
+                    <Flex
+                      flexDirection="column"
+                      alignItems="center"
+                      width={[1, "50%"]}
+                      my={2}
+                      px={2}
+                    >
                       <Text
                         fontSize={[3, 4, 5]}
                         fontWeight="bold"
                         color="lightblue"
+                        mt="auto"
                       >
                         Alex Kondratenko
                       </Text>
@@ -71,13 +78,21 @@ export default class Home extends Component {
                         width={[1, 1, 1 / 2]}
                         src="https://avatars1.githubusercontent.com/u/16922103?s=400&v=4"
                         borderRadius={8}
+                        mt={"auto"}
                       />
-                    </Box>
-                    <Box width={[1, "50%"]} my={2}>
+                    </Flex>
+                    <Flex
+                      flexDirection="column"
+                      alignItems="center"
+                      width={[1, "50%"]}
+                      my={2}
+                      px={2}
+                    >
                       <Text
                         fontSize={[3, 4, 5]}
                         fontWeight="bold"
                         color="lightblue"
+                        mt="auto"
                       >
                         Kishan Polekar
                       </Text>
@@ -85,13 +100,21 @@ export default class Home extends Component {
                         width={[1, 1, 1 / 2]}
                         src="https://myedu-images-prod01.s3.amazonaws.com/7642067-49a35f88cdd17d8e1e0370b1048b46d0-thumb"
                         borderRadius={8}
+                        mt={"auto"}
                       />
-                    </Box>
-                    <Box width={[1, "50%"]} my={2}>
+                    </Flex>
+                    <Flex
+                      flexDirection="column"
+                      alignItems="center"
+                      width={[1, "50%"]}
+                      my={2}
+                      px={2}
+                    >
                       <Text
                         fontSize={[3, 4, 5]}
                         fontWeight="bold"
                         color="lightblue"
+                        mt="auto"
                       >
                         Ryan Charles
                       </Text>
@@ -99,22 +122,31 @@ export default class Home extends Component {
                         width={[1, 1, 1 / 2]}
                         src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/61901_10151524487449966_624369307_n.jpg?_nc_cat=101&_nc_ht=scontent.fmkc1-1.fna&oh=7341f3e7f3e6b2f984d73915e12d03cb&oe=5D2A84D0"
                         borderRadius={8}
+                        mt={"auto"}
                       />
-                    </Box>
-                    <Box width={[1, "50%"]} my={2}>
+                    </Flex>
+                    <Flex
+                      flexDirection="column"
+                      alignItems="center"
+                      width={[1, "50%"]}
+                      my={2}
+                      px={2}
+                    >
                       <Text
                         fontSize={[3, 4, 5]}
                         fontWeight="bold"
                         color="lightblue"
+                        mt="auto"
                       >
-                        Shane Lewes-Tenorio
+                        Shane-Lewes Tenorio
                       </Text>
                       <Image
                         width={[1, 1, 1 / 2]}
                         src="https://avatars1.githubusercontent.com/u/12619633?s=460&v=4"
                         borderRadius={8}
+                        mt={"auto"}
                       />
-                    </Box>
+                    </Flex>
                   </Flex>
                   <Text fontSize={[10, 10, 2]} fontWeight="bold" color="dark">
                     And

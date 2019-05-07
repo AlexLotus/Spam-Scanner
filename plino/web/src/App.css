@@ -262,10 +262,22 @@ input[type="file"] {
   left: -60px;
 }
 .img {
-  width: 450px
-  
+  width: 450px;
 }
 .imgf {
-  width: 400px
-  
+  width: 400px;
+}
+
+.spam-list thead {
+  background: transparent;
+  border-bottom: 1px solid #ddd;
+}
+
+.spam-list tr {
+  background: transparent !important;
+  text-align: left !important;
+}
+
+.spam-list td {
+  background: transparent !important;
 }
