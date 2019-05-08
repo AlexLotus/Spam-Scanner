@@ -1,6 +1,6 @@
 # Spam Scanner
 
-Back-end provided through HTTP requests by [Plino](https://github.com/tasdikrahman/plino) and [Spammy](https://github.com/tasdikrahman/spammy)_
+Back-end provided through HTTP requests by [Plino](https://github.com/tasdikrahman/plino) and [Spammy](https://github.com/tasdikrahman/spammy)
 
 ## About
 
@@ -10,25 +10,26 @@ Web application to allow users to test their messages and check whether or not t
 
 A user can create an account on the website to get the full functionality of the spam filtering application. After logging in the user should be able to test their message to check whether or not they are classified as spam. 
 
-## Backend
+## Backend setup
 
 - Python 2.7
   - Flask web microframework
   - Provided by Plino
 
-## Frontend
+## Frontend setup
 
 - Javascript
   - React.js
-  - Html
-  - Css
+- Html
+- Css
 
 ## Setup
 
 The following steps can be used to set-up the web-server yourself.
 
 ```bash
-# From root directory
+# Make sure you have node installed, link below
+# From root directory:
 $ cd Web-Application
 $ npm install
 $ npm start
@@ -36,5 +37,5 @@ $ npm start
 ```
 
 Setup requires that you have node installed.
-Install node here: https://nodejs.org/en/download
-LTS Version: 10.15.3
+* Install [node](https://nodejs.org/en/download) 
+* LTS Version: 10.15.3
